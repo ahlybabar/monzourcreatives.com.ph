@@ -56,9 +56,9 @@
             <a href="services/web-development.html" class="dropdown-item" role="menuitem">Website Design &amp; Development</a>
           </div>
         </div>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="#contact" class="nav-link active">Contact</a>
       </nav>
-      <a href="contact.html" class="hdr-pill-btn">
+      <a href="#contact" class="hdr-pill-btn">
         <span>Get In Touch</span>
         <span class="hdr-pill-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
@@ -70,130 +70,170 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="section-label" style="justify-content:center">Contact &amp; Inquiries</span>
-        <h1>Let&rsquo;s Discuss Your Project.</h1>
-        <p class="subtitle">
-          Ready to establish consistent social media posting, launch targeted Meta Ads, boost your local Google rankings, or automate repetitive tasks? Let's connect.
-        </p>
-        <div class="availability" style="justify-content:center;margin-top:1.5rem">
-          <span class="dot"></span>
-          Currently accepting new clients &middot; Fast 24-Hour Response
-        </div>
-      </div>
-    </section>
+  <main id="main" style="padding-top: 60px;">
+    <!-- ===== 11. CONTACT SECTION (With Client Toolkit Highlight) ===== -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
 
-    <section class="section">
-      <div class="container">
-        <div class="contact-grid reveal">
-          <!-- Contact Form with Validation & Fallback -->
-          <div>
-            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.25rem;">
-              <h2 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:0.5rem">Send Me a Message</h2>
-              <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.5rem">Fill out the fields below and I'll get back to you within 24 hours.</p>
+        <!-- Left: Heading & Details -->
+        <div class="contact-left-col">
+          <span class="sub-tag">// CONTACT</span>
+          <h2 class="contact-main-heading">
+            Fill Out Our Form To<br>Get In Touch.
+          </h2>
 
-              <!-- PLACEHOLDER: Formspree endpoint placeholder.
-                   Sign up free at https://formspree.io and paste your form ID in action below:
-                   e.g. action="https://formspree.io/f/my-form-id" -->
-              <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
-                <div class="form-group">
-                  <label class="form-label" for="name">Your Name *</label>
-                  <input type="text" class="form-input" id="name" name="name" placeholder="John Smith" required>
-                  <p class="form-error">Please enter your name.</p>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="business">Business or Organization Name</label>
-                  <input type="text" class="form-input" id="business" name="business" placeholder="e.g. Smith Electrical Services">
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="email">Email Address *</label>
-                  <input type="email" class="form-input" id="email" name="email" placeholder="john@example.com" required>
-                  <p class="form-error">Please enter a valid email address.</p>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="phone">Phone Number</label>
-                  <input type="tel" class="form-input" id="phone" name="phone" placeholder="+61 400 000 000 or +63 900 000 0000">
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="message">How Can I Help You? *</label>
-                  <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your business, current marketing challenges, and target goals..." required></textarea>
-                  <p class="form-error">Please enter your message.</p>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message &rarr;</button>
-
-                <div class="form-status" role="alert"></div>
-
-                <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;text-align:center">
-                  Prefer direct email? Reach me at <a href="mailto:ahlybabar1188@gmail.com" style="color:var(--accent)">ahlybabar1188@gmail.com</a>
-                </p>
-              </form>
+          <!-- CLIENT TOOLKIT HIGHLIGHT -->
+          <div class="toolkit-highlight">
+            <div class="toolkit-header">
+              <span class="toolkit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 12 20 22 4 22 4 12" />
+                  <rect x="2" y="7" width="20" height="5" />
+                  <line x1="12" y1="22" x2="12" y2="7" />
+                  <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+                  <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                </svg>
+              </span>
+              <span class="toolkit-title">Client Onboarding Toolkit</span>
+              <span class="toolkit-badge">FREE</span>
+            </div>
+            <p class="toolkit-desc">
+              Once you submit this form, you'll receive our complete Client Onboarding Toolkit — everything you need to
+              get started, delivered straight to your inbox.
+            </p>
+            <div class="toolkit-items">
+              <div class="toolkit-item">
+                <span class="toolkit-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Client Portal Access
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Brand Questionnaire
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Project Timeline
+              </div>
+              <div class="toolkit-item">
+                <span class="toolkit-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                Communication Guide
+              </div>
             </div>
           </div>
 
-          <!-- Direct Details & Timezone Info -->
-          <div class="contact-info">
-            <div class="contact-detail">
-              <div class="contact-detail-icon">&#9993;&#65039;</div>
-              <div>
-                <h4>Direct Email</h4>
-                <a href="mailto:ahlybabar1188@gmail.com">ahlybabar1188@gmail.com</a>
-                <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Checked daily; 24-hour response turnaround.</p>
-              </div>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <span class="cii-label">EMAIL</span>
+              <a href="mailto:ahlybabar1188@gmail.com" class="cii-val">ahlybabar1188@gmail.com</a>
             </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">&#128222;</div>
-              <div>
-                <h4>Direct Phone / WhatsApp</h4>
-                <a href="tel:+639476179440">+63 947 617 9440</a>
-                <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Voice and messaging available.</p>
-              </div>
+            <div class="contact-info-item">
+              <span class="cii-label">PHONE</span>
+              <a href="tel:+639476179440" class="cii-val">+63 947 617 9440</a>
             </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">&#128205;</div>
-              <div>
-                <h4>Location</h4>
-                <p>Nasugbu, Batangas, Philippines</p>
-              </div>
+            <div class="contact-info-item">
+              <span class="cii-label">LOCATION</span>
+              <span class="cii-val">Nasugbu, Batangas, Philippines</span>
             </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">&#128337;</div>
-              <div>
-                <h4>Timezone &amp; Working Alignment</h4>
-                <p>Philippine Standard Time (PHT &middot; UTC+8)</p>
-                <p style="font-size:0.82rem;color:var(--text-muted);margin-top:0.25rem">
-                  Convenient real-time overlap with Australia (AEST/AEDT), Singapore/Hong Kong, and Europe.
-                </p>
-              </div>
+            <div class="contact-info-item">
+              <span class="cii-label">TIMEZONE</span>
+              <span class="cii-val">Philippine Standard Time &bull; PHT (UTC+8)</span>
             </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">&#128188;</div>
-              <div>
-                <h4>LinkedIn Network</h4>
-                <a href="https://www.linkedin.com/in/ahly-monzour-babar-473a53365/" target="_blank" rel="noopener">linkedin.com/in/ahly-monzour-babar</a>
-              </div>
-            </div>
-
-            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1rem">
-              <h4 style="font-family:var(--font-heading);font-size:0.95rem;margin-bottom:0.5rem">&#128203; What to expect next:</h4>
-              <ol style="font-size:0.88rem;color:var(--text-secondary);line-height:1.6;padding-left:1.2rem">
-                <li>I review your message and existing online profiles.</li>
-                <li>I reply within 24 hours with preliminary thoughts.</li>
-                <li>We hold a no-obligation 20-minute discovery call to align on goals.</li>
-              </ol>
+            <div class="contact-info-item">
+              <span class="cii-label">LINKEDIN</span>
+              <a href="https://www.linkedin.com/in/ahly-monzour-babar-473a53365/" target="_blank" rel="noopener"
+                class="cii-val">ahly-monzour-babar</a>
             </div>
           </div>
         </div>
+
+        <!-- Right: Floating Form Card -->
+        <div class="contact-right-col">
+          <div class="contact-card-box">
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+              <div class="form-dual-row">
+                <div class="form-group">
+                  <label class="form-label" for="cf-first-name">First Name</label>
+                  <input class="form-input" id="cf-first-name" name="first_name" type="text" placeholder="John"
+                    required>
+                  <span class="form-error">Please enter your first name.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cf-last-name">Last Name</label>
+                  <input class="form-input" id="cf-last-name" name="last_name" type="text" placeholder="Doe" required>
+                  <span class="form-error">Please enter your last name.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Email Address</label>
+                <input class="form-input" id="cf-email" name="email" type="email" placeholder="john@example.com"
+                  required>
+                <span class="form-error">Please enter a valid email.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-business">Business Name</label>
+                <input class="form-input" id="cf-business" name="business_name" type="text"
+                  placeholder="Your Business Pty Ltd">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-phone">Phone Number</label>
+                <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+61 400 000 000">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-service">Service Needed</label>
+                <select class="form-input" id="cf-service" name="service">
+                  <option value="">Select a service...</option>
+                  <option>Digital Marketing Strategy</option>
+                  <option>Meta Ads & Social Media Advertising</option>
+                  <option>SEO & Google Business Profile</option>
+                  <option>Website Design & Development</option>
+                  <option>n8n AI Workflow Automation</option>
+                  <option>Full Marketing Retainer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-message">Message</label>
+                <textarea class="form-input form-textarea" id="cf-message" name="message"
+                  placeholder="Tell me about your business goals and what you need..." required></textarea>
+                <span class="form-error">Please enter a message.</span>
+              </div>
+
+              <button type="submit" class="contact-submit-pill">
+                <span>SEND MESSAGE & GET TOOLKIT</span>
+                <span class="btn-arrow">&rarr;</span>
+              </button>
+
+              <div class="form-status" role="alert"></div>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -208,7 +248,7 @@
         <div class="footer-links-group">
           <div class="footer-nav-col">
             <span class="fnc-title">PAGES</span>
-            <a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#projects">Work</a><a href="index.html#articles">Blog</a><a href="contact.html">Contact</a>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#projects">Work</a><a href="index.html#articles">Blog</a><a href="#contact">Contact</a>
           </div>
           <div class="footer-nav-col">
             <span class="fnc-title">SERVICES</span>
