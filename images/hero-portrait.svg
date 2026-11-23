@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="520" viewBox="0 0 400 520" fill="none">
+  <defs>
+    <!-- Rim light gradient -->
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A3D" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#E8552E" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#991B00" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Skin tone with red-orange rim -->
+    <linearGradient id="silhouetteGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#2D1B18"/>
+      <stop offset="60%" stop-color="#181110"/>
+      <stop offset="100%" stop-color="#0B0B0E"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient backlight halo -->
+  <ellipse cx="200" cy="180" rx="140" ry="160" fill="#FF4D00" opacity="0.3" filter="url(#softGlow)"/>
+
+  <!-- Head / Hair silhouette with rim light -->
+  <path d="M150 140 C140 100, 170 60, 205 60 C240 60, 270 95, 265 140 C262 170, 255 190, 250 205 C240 225, 225 240, 200 240 C175 240, 160 225, 150 205 Z" fill="url(#silhouetteGrad)" stroke="#FFA07A" stroke-width="2.5" stroke-opacity="0.7"/>
+
+  <!-- Neck -->
+  <path d="M185 235 L180 280 L220 280 L215 235 Z" fill="url(#silhouetteGrad)"/>
+
+  <!-- Shoulders & Torso -->
+  <path d="M120 300 C150 280, 180 275, 200 275 C220 275, 250 280, 280 300 C315 325, 340 375, 350 450 L50 450 C60 375, 85 325, 120 300 Z" fill="url(#silhouetteGrad)" stroke="#FF6B3D" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Soft rim light highlights on shoulders -->
+  <path d="M120 300 C150 280, 180 275, 200 275" stroke="#FFA07A" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M200 275 C220 275, 250 280, 280 300" stroke="#FFA07A" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M150 120 C145 90, 170 65, 205 65" stroke="#FFD1BA" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+  <!-- Elegant fade to base -->
+  <rect y="380" width="400" height="140" fill="url(#fadeBottom)"/>
+  <defs>
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B0B0E" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#0B0B0E" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0B0B0E" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#404048"/>
+      <stop offset="100%" stop-color="#181820"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#250B0B"/>
+      <stop offset="70%" stop-color="#120404"/>
+      <stop offset="100%" stop-color="#080202"/>
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#80A0FF" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Person standing -->
+  <!-- Head with warm edge light -->
+  <path d="M165 110 C155 70, 180 35, 210 35 C240 35, 265 70, 255 110 C250 140, 240 160, 210 160 C180 160, 170 140, 165 110 Z" fill="url(#bodyGrad)" stroke="#FFAA99" stroke-width="2"/>
+  <path d="M170 85 C170 50, 190 40, 210 40 C230 40, 250 50, 250 85" stroke="#FFE2DC" stroke-width="2" fill="none" opacity="0.8"/>
+
+  <!-- Neck -->
+  <path d="M195 155 L190 195 L225 195 L220 155 Z" fill="url(#bodyGrad)"/>
+
+  <!-- Shoulders & Arms -->
+  <path d="M110 220 C145 195, 185 190, 210 190 C235 190, 275 195, 310 220 C340 245, 360 300, 365 420 L55 420 C60 300, 80 245, 110 220 Z" fill="url(#bodyGrad)" stroke="#FF6B4A" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Open Laptop held in front -->
+  <!-- Laptop base -->
+  <polygon points="120,330 290,320 280,360 110,370" fill="url(#laptopGrad)" stroke="#666" stroke-width="1"/>
+  <!-- Laptop screen angled up -->
+  <polygon points="110,240 240,230 250,330 120,340" fill="url(#laptopGrad)" stroke="#888" stroke-width="1.5"/>
+  <!-- Screen display illumination -->
+  <polygon points="118,248 232,239 240,325 126,334" fill="url(#screenGlow)" opacity="0.85"/>
+  
+  <!-- Subtle screen light cast on person face/chest -->
+  <ellipse cx="210" cy="180" rx="40" ry="30" fill="#FFFFFF" opacity="0.15"/>
+
+  <!-- Hands holding laptop -->
+  <ellipse cx="115" cy="355" rx="16" ry="12" fill="#D49A88"/>
+  <ellipse cx="280" cy="345" rx="16" ry="12" fill="#D49A88"/>
+</svg>

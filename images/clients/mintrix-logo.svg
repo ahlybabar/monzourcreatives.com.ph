@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40" fill="none">
+  <rect width="36" height="36" y="2" rx="8" fill="#B79CFF" fill-opacity="0.15" stroke="#B79CFF" stroke-width="1.5"/>
+  <path d="M10 26 L14 14 L18 22 L22 14 L26 26" stroke="#B79CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="46" y="24" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" letter-spacing="0.05em">MINTRIX</text>
+  <text x="46" y="34" fill="#A0A0B0" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.12em">VIRTUAL ASSISTANTS</text>
+</svg>

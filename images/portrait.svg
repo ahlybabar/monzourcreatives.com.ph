@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#B79CFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#131318" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#glow)" rx="20"/>
+  <rect x="1" y="1" width="398" height="498" rx="19" stroke="#B79CFF" stroke-opacity="0.2"/>
+  <circle cx="200" cy="180" r="75" fill="#1C1C26" stroke="#B79CFF" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="200" cy="160" r="42" fill="#282838"/>
+  <path d="M135 270 C135 215, 265 215, 265 270 Z" fill="#282838"/>
+  <!-- Decorative badge -->
+  <rect x="120" y="295" width="160" height="28" rx="14" fill="#B79CFF" fill-opacity="0.15" stroke="#B79CFF" stroke-width="1"/>
+  <text x="200" y="313" text-anchor="middle" fill="#B79CFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" letter-spacing="0.05em">AHLY MONZOUR BABAR</text>
+  <text x="200" y="360" text-anchor="middle" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600">Digital Marketing &amp; AI Automation</text>
+  <text x="200" y="385" text-anchor="middle" fill="#A0A0B0" font-family="'Inter', sans-serif" font-size="13">Mintrix Virtual Assistants</text>
+  <text x="200" y="440" text-anchor="middle" fill="#6B6B7B" font-family="'Inter', sans-serif" font-size="11">[Replace with your portrait photo: images/portrait.jpg]</text>
+</svg>

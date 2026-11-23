@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="520" viewBox="0 0 460 520" fill="none">
+  <defs>
+    <!-- Geometric red background backdrop -->
+    <linearGradient id="redBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C72C15"/>
+      <stop offset="50%" stop-color="#8E1408"/>
+      <stop offset="100%" stop-color="#3A0804"/>
+    </linearGradient>
+    <linearGradient id="geomBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8442A"/>
+      <stop offset="100%" stop-color="#9C1A09"/>
+    </linearGradient>
+    <linearGradient id="personGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A0B09"/>
+      <stop offset="50%" stop-color="#140504"/>
+      <stop offset="100%" stop-color="#080202"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep crimson red background -->
+  <rect width="460" height="520" fill="url(#redBg)"/>
+
+  <!-- Diagonal geometric architectural cross-shapes like Charlotte's photo -->
+  <g opacity="0.35">
+    <polygon points="0,80 180,0 260,0 0,260" fill="url(#geomBar)"/>
+    <polygon points="200,520 460,260 460,380 320,520" fill="url(#geomBar)"/>
+    <line x1="0" y1="200" x2="460" y2="350" stroke="#FF5A36" stroke-width="8" opacity="0.4"/>
+  </g>
+
+  <!-- Portrait figure -->
+  <!-- Head with vivid red rim light -->
+  <path d="M180 160 C170 110, 200 70, 235 70 C270 70, 300 110, 290 160 C285 190, 275 220, 235 220 C195 220, 185 190, 180 160 Z" fill="url(#personGrad)" stroke="#FFA08A" stroke-width="3"/>
+
+  <!-- Hair / Jaw accents -->
+  <path d="M185 130 C185 85, 215 75, 235 75 C255 75, 280 85, 285 130" stroke="#FFD8CF" stroke-width="2.5" fill="none" opacity="0.85"/>
+
+  <!-- Neck -->
+  <path d="M215 215 L210 260 L260 260 L255 215 Z" fill="url(#personGrad)"/>
+
+  <!-- Torso & Shoulders in black knit top -->
+  <path d="M130 290 C170 260, 210 255, 235 255 C260 255, 300 260, 340 290 C380 320, 410 380, 420 520 L50 520 C60 380, 90 320, 130 290 Z" fill="url(#personGrad)" stroke="#FF6B4A" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Shoulder edge highlights -->
+  <path d="M130 290 C170 260, 210 255, 235 255" stroke="#FFA38C" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M235 255 C260 255, 300 260, 340 290" stroke="#FFA38C" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
