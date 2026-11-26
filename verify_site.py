@@ -3,6 +3,7 @@ import re
 
 html_files = []
 for root, dirs, files in os.walk('.'):
+    dirs[:] = [d for d in dirs if d not in ('vendor', '.git', 'skills-main')]
     for f in files:
         if f.endswith('.html'):
             html_files.append(os.path.join(root, f))

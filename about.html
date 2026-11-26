@@ -1,123 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Monzour Creatives — Freelance Digital Marketing Consultant &amp; AI Automation Specialist. Social media management, Meta Ads, SEO, n8n workflow automation, and front-end development.">
-  <meta name="author" content="Monzour Creatives">
-  <meta name="keywords" content="digital marketing, AI automation, n8n, social media management, Meta Ads, SEO, Google Business Profile, front-end developer, virtual assistant, Philippines">
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="About | Monzour Creatives">
-  <meta property="og:description" content="I help businesses grow with strategic social media, 90-day content calendars, Meta Ads, SEO, and custom n8n AI automations.">
-  <meta property="og:type" content="website">
-  <!-- PLACEHOLDER: Replace og-image.jpg with your preview share image -->
-  <meta property="og:image" content="images/ahly-portrait.jpg">
-
-  <!-- Favicon -->
-  <!-- PLACEHOLDER: Replace favicon.png with your custom brand favicon -->
+  <meta name="description"
+    content="About Ahly Monzour H. Babar — Digital Marketing, Local SEO, Meta Ads, n8n Workflow Automation, and Front-End Web Development.">
+  <meta name="author" content="Ahly Monzour Babar">
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- Fonts: Bebas Neue (display) + DM Sans (body) + Playfair Display (editorial wordmark) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
 
-  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1.7.15/open-props.min.css">
   <link rel="stylesheet" href="css/styles.css">
-
   <title>About | Monzour Creatives</title>
 </head>
+
 <body>
-  <!-- Accessibility Skip Link -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
   <a href="#main" class="skip-link">Skip to main content</a>
   <div class="nav-overlay" aria-hidden="true"></div>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
     <div class="hdr-inner">
-      <a href="index.html" class="logo" aria-label="Monzour Creatives Home"><img src="images/logo.png" alt="Monzour Creatives" class="logo-img"></a>
+      <a href="index.html" class="logo" aria-label="Monzour Creatives Home">
+        <img src="images/logo.png" alt="Monzour Creatives" class="logo-img">
+      </a>
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link active">About</a>
         <a href="index.html#services" class="nav-link">Services</a>
-        <a href="index.html#projects" class="nav-link">Work</a>
-        <a href="index.html#articles" class="nav-link">Blog</a>
+        <a href="portfolio.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link active">About</a>
         <div class="dropdown">
           <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
             Specialties
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
           </a>
           <div class="dropdown-menu" role="menu">
-            <a href="services/social-media.html" class="dropdown-item" role="menuitem">Social Media &amp; Content Calendars</a>
-            <a href="services/meta-ads.html" class="dropdown-item" role="menuitem">Meta Ads Management</a>
-            <a href="services/seo.html" class="dropdown-item" role="menuitem">SEO &amp; Google Business Profile</a>
-            <a href="services/ai-automation.html" class="dropdown-item" role="menuitem">AI Workflow Automation (n8n)</a>
-            <a href="services/web-development.html" class="dropdown-item" role="menuitem">Website Design &amp; Development</a>
+            <a href="services/ai-automation.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="workflow" aria-hidden="true"></i>
+              <span>n8n Workflow Automation</span>
+            </a>
+            <a href="services/meta-ads.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="megaphone" aria-hidden="true"></i>
+              <span>Meta Ads &amp; Paid Social</span>
+            </a>
+            <a href="services/seo.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span>Local SEO &amp; Google Profile</span>
+            </a>
+            <a href="services/web-development.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="code-2" aria-hidden="true"></i>
+              <span>Web Design &amp; Development</span>
+            </a>
+            <a href="services/social-media.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+              <span>Social Media Management</span>
+            </a>
           </div>
         </div>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <a href="index.html#contact" class="hdr-pill-btn">
-        <span>Get In Touch</span>
-        <span class="hdr-pill-arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </span>
+      <a href="contact.html" class="hdr-pill-btn">
+        <span>Work With Me</span>
+        <span class="hdr-pill-arrow" aria-hidden="true"><i data-lucide="arrow-up-right"></i></span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <main id="main">
-    <!-- Page Hero -->
     <section class="page-hero">
       <div class="container">
-        <span class="section-label" style="justify-content:center">About Consultant</span>
-        <h1>Developer Mindset.<br><span class="text-accent">Marketing Execution.</span></h1>
+        <span class="section-label">About Me</span>
+        <h1>Code + Marketing.<br><span class="text-accent">Built Together.</span></h1>
         <p class="subtitle">
-          I am Ahly Monzour H. Babar &mdash; a Digital Marketing Assistant &amp; AI Automation Specialist based in Nasugbu, Batangas, Philippines.
+          I'm Ahly Monzour H. Babar&mdash;an Information Technology graduate, digital marketer, and n8n automation
+          builder based in Nasugbu, Batangas, Philippines.
         </p>
       </div>
     </section>
 
-    <!-- Bio & Stats Section -->
     <section class="section">
       <div class="container">
         <div class="consultant-grid reveal">
           <div class="consultant-image">
-            <img src="images/ahly-portrait.jpg" alt="Ahly Monzour Babar" style="width:100%;height:100%;object-fit:cover;">
+            <img src="images/ahly-portrait.jpg" alt="Ahly Monzour Babar">
           </div>
           <div class="consultant-bio">
-            <span class="section-label">My Story</span>
-            <h2 style="font-family:var(--font-heading);font-size:1.85rem;margin-bottom:1rem">From Front-End Code to Marketing Strategy</h2>
+            <span class="section-label">Background</span>
+            <h2 class="section-title" style="font-size:1.85rem;">Why Marketing &amp; Engineering Belong Together</h2>
             <p>
-              My journey began in technical software development. While completing my Bachelor of Science in Information Technology at <strong>Batangas State University ARASOF-Nasugbu</strong> (graduating with a <strong>GWA of 1.9</strong>), I interned as a <strong>Front-End Developer at CertiCode</strong> in Makati. There, I built responsive UI components using HTML5, CSS3, JavaScript, and Git within an Agile environment.
+              I began in software development. While finishing my Bachelor of Science in Information Technology at
+              <strong>Batangas State University ARASOF-Nasugbu</strong> (graduating with a <strong>1.9 GWA</strong>), I
+              interned as a <strong>Front-End Developer at CertiCode</strong> in Makati, building responsive UI
+              components with HTML5, CSS3, JavaScript, and Git.
             </p>
             <p>
-              I quickly recognized that great technical products and small businesses often suffer from the same problem: <em>inconsistent marketing and fragmented manual operations</em>. I transitioned into digital marketing and automation, joining <strong>Mintrix Virtual Assistants</strong> in May 2026.
-            </p>
-            <p>
-              Today, I manage social media presence, design 90-day content calendars, configure Meta Ads Manager campaigns, optimize Google Business Profiles for local search, and build sophisticated <strong>n8n workflow automations</strong> connecting APIs, CRMs, and messaging systems.
+              I saw that many local businesses waste hours on disconnected tools: untracked ads, slow web pages, and
+              manual lead copy-pasting. Since joining <strong>Mintrix Virtual Assistants</strong> in May 2026, I handle
+              Meta Ads, social management, Google Business Profile SEO, and <strong>n8n workflow automations</strong>
+              under one roof.
             </p>
 
             <div class="stats-row">
               <div class="stat-item">
-                <span class="stat-number" data-count="1.9">0</span>
+                <span class="stat-number" data-count="1.9">1.9</span>
                 <span class="stat-label">College GWA</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number" data-count="15" data-suffix="+">0</span>
-                <span class="stat-label">Certifications</span>
+                <span class="stat-number" data-count="15" data-suffix="+">15+</span>
+                <span class="stat-label">Verified Certs</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number" data-count="90">0</span>
-                <span class="stat-label">Day Content Plans</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-count="1" data-suffix=" Platform">0</span>
-                <span class="stat-label">ExcelLens in Production</span>
+                <span class="stat-number" data-count="700" data-suffix="+">700+</span>
+                <span class="stat-label about-google-stat">
+                  <span class="google-inline-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                  </span>
+                  5.0&#9733; Google Reviews Supported
+                </span>
               </div>
             </div>
           </div>
@@ -125,88 +136,44 @@
       </div>
     </section>
 
-    <!-- 4-Step Process: Discovery -> Strategy -> Launch -> Optimisation -->
-    <section class="section reveal" aria-label="My structured 4-step process">
-      <div class="container">
-        <span class="section-label">The Process</span>
-        <h2 class="section-title">How we go from audit to automated growth.</h2>
-        <p class="section-subtitle">A proven 4-stage operational framework that prevents wasted effort and keeps your brand moving forward:</p>
-        <div class="process-steps">
-          <div class="process-step reveal">
-            <h3>1. Discovery &amp; Audit</h3>
-            <p>We review your existing social media profiles, Google Business Profile presence, past advertising data, and manual friction points to establish clear baseline metrics.</p>
-          </div>
-          <div class="process-step reveal">
-            <h3>2. Strategy &amp; 90-Day Calendar</h3>
-            <p>I map out your 90-day content calendar, identify key promotional themes, draft audience targeting parameters in Meta Ads Manager, and design workflow automation blueprints.</p>
-          </div>
-          <div class="process-step reveal">
-            <h3>3. Launch &amp; Automate</h3>
-            <p>Content is produced, reviewed, and scheduled in Meta Business Suite. Paid campaigns are launched, and custom n8n automations go live to handle lead alerts and routine syncs.</p>
-          </div>
-          <div class="process-step reveal">
-            <h3>4. Track, Report &amp; Optimise</h3>
-            <p>Using Google Analytics and platform metrics, I provide clear bi-weekly reports detailing what performed best and where to allocate our focus in the next 90-day sprint.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- End Goal Statement -->
-    <section class="closing-cta reveal" style="padding-bottom:1rem">
-      <div class="container">
-        <span class="section-label" style="justify-content:center">The End Goal</span>
-        <h2>A marketing engine that operates<br><span class="text-accent">consistently without your constant supervision</span>.</h2>
-        <p>
-          When you partner with me, you aren't just buying random posts &mdash; you are installing a structured digital workflow that keeps your brand visible, your local rankings strong, and your leads organized while you focus on service delivery.
-        </p>
-      </div>
-    </section>
-
-    <!-- Experience & Education Timeline -->
     <section class="section reveal" aria-label="Experience and education timeline">
       <div class="container">
-        <span class="section-label">Professional Timeline</span>
+        <span class="section-label">Timeline</span>
         <h2 class="section-title">Experience &amp; Education</h2>
         <div class="timeline">
-          <!-- Mintrix -->
-          <div class="timeline-item reveal">
+          <div class="timeline-item">
             <div class="timeline-date">May 2026 &mdash; Present</div>
             <div class="timeline-title">Digital Marketing with AI Automation</div>
-            <div class="timeline-company">Mintrix Virtual Assistants &middot; Full-Time Virtual Specialist</div>
+            <div class="timeline-company">Mintrix Virtual Assistants &middot; Full-Time Specialist</div>
             <div class="timeline-desc">
               <ul>
-                <li>Design, build, and maintain AI-powered workflow automations in <strong>n8n</strong>, connecting applications and APIs to streamline repetitive digital marketing and administrative tasks for client accounts.</li>
-                <li>Serve as social media administrator for client accounts: plan, create, schedule, and publish content using <strong>Meta Business Suite</strong>, managing comprehensive <strong>90-day content calendars</strong> aligned with brand and campaign goals.</li>
-                <li>Set up, manage, and monitor paid social advertising campaigns in <strong>Meta Ads Manager</strong> to support client customer acquisition and audience growth.</li>
-                <li>Apply SEO best practices and actively manage <strong>Google Business Profile</strong> listings to improve local visibility and search performance.</li>
-                <li>Track content and campaign performance using <strong>Google Analytics</strong>, extracting actionable insights to continuously steer content strategy.</li>
+                <li>Build and maintain workflow automations in <strong>n8n</strong>, connecting forms, CRMs, and APIs.</li>
+                <li>Run client social media operations and paid campaigns in <strong>Meta Business Suite &amp; Ads Manager</strong>.</li>
+                <li>Manage <strong>Google Business Profile</strong> updates, local SEO, and <strong>Google Analytics</strong> reporting.</li>
               </ul>
             </div>
           </div>
 
-          <!-- CertiCode -->
-          <div class="timeline-item reveal">
+          <div class="timeline-item">
             <div class="timeline-date">2026</div>
             <div class="timeline-title">Front-End Developer (Internship)</div>
             <div class="timeline-company">CertiCode &middot; Makati, Philippines</div>
             <div class="timeline-desc">
               <ul>
-                <li>Designed and implemented front-end web components for production web applications, applying HTML, CSS, and JavaScript best practices to deliver responsive, cross-browser compatible user interfaces.</li>
-                <li>Collaborated closely with senior developers in an Agile environment to review functional requirements, iterate on UI/UX feedback, and ship polished features on schedule.</li>
-                <li>Maintained high code quality through consistent version control practices using Git, contributing to a shared codebase with multiple concurrent developers.</li>
+                <li>Built responsive, cross-browser front-end components in HTML5, CSS3, and JavaScript.</li>
+                <li>Worked with senior developers in an Agile workflow using Git version control.</li>
               </ul>
             </div>
           </div>
 
-          <!-- Education -->
-          <div class="timeline-item reveal">
+          <div class="timeline-item">
             <div class="timeline-date">August 2022 &mdash; July 2026</div>
             <div class="timeline-title">Bachelor of Science in Information Technology</div>
             <div class="timeline-company">Batangas State University ARASOF-Nasugbu Campus &middot; GWA: 1.9</div>
             <div class="timeline-desc">
               <ul>
-                <li><strong>Research Project: ExcelLens</strong> &mdash; Student Performance &amp; Course Analytics Platform (2025). Led front-end UI engineering, developed dynamic automated grading systems, and successfully deployed the platform for active academic use across multiple university colleges.</li>
+                <li><strong>ExcelLens (2025):</strong> Led front-end UI engineering and automated grading logic for an
+                  academic analytics platform deployed across multiple university colleges.</li>
               </ul>
             </div>
           </div>
@@ -214,166 +181,144 @@
       </div>
     </section>
 
-    <!-- Certifications Section (15+ exact certifications from resume) -->
     <section class="section reveal" id="certifications" aria-label="Official certifications and credentials">
       <div class="container">
         <span class="section-label">Verified Credentials</span>
         <h2 class="section-title">Certifications &amp; Accreditations</h2>
-        <p class="section-subtitle">15+ verified credentials spanning Digital Marketing, Analytics, Cloud Computing, AI, and Professional Communication:</p>
+        <p class="section-subtitle">15+ verified credentials across Digital Marketing, Analytics, Cloud, AI, and IT:</p>
 
-        <!-- Category Filters -->
-        <div class="cert-filters" style="margin-top:2rem">
-          <button class="cert-filter active" data-filter="all">All Certifications</button>
-          <button class="cert-filter" data-filter="professional">Professional / IT</button>
-          <button class="cert-filter" data-filter="marketing">Marketing &amp; Analytics</button>
-          <button class="cert-filter" data-filter="cloud">Cloud Computing</button>
-          <button class="cert-filter" data-filter="data">Data Science &amp; AI</button>
-          <button class="cert-filter" data-filter="ux">UX &amp; Communication</button>
+        <div class="cert-filters">
+          <button type="button" class="cert-filter active" data-filter="all">All Certifications</button>
+          <button type="button" class="cert-filter" data-filter="marketing">Marketing &amp; Analytics</button>
+          <button type="button" class="cert-filter" data-filter="professional">Professional / IT</button>
+          <button type="button" class="cert-filter" data-filter="data">Data Science &amp; AI</button>
+          <button type="button" class="cert-filter" data-filter="cloud">Cloud</button>
+          <button type="button" class="cert-filter" data-filter="ux">UX &amp; Comms</button>
         </div>
 
         <div class="cert-grid">
-          <!-- Professional -->
-          <div class="cert-card" data-category="professional">
-            <div class="cert-icon">&#127942;</div>
-            <div class="cert-info">
-              <h4>IT Specialist &ndash; Data Analytics</h4>
-              <span class="cert-issuer">Batangas State University ARASOF-Nasugbu</span>
-              <span class="cert-date">May 2025</span>
-            </div>
-          </div>
-
-          <div class="cert-card" data-category="professional">
-            <div class="cert-icon">&#127942;</div>
-            <div class="cert-info">
-              <h4>IT Specialist &ndash; Databases</h4>
-              <span class="cert-issuer">Batangas State University ARASOF-Nasugbu</span>
-              <span class="cert-date">May 2024</span>
-            </div>
-          </div>
-
-          <div class="cert-card" data-category="professional">
-            <div class="cert-icon">&#127942;</div>
-            <div class="cert-info">
-              <h4>Microsoft Office Specialist &ndash; Microsoft Word (Office 2019)</h4>
-              <span class="cert-issuer">Batangas State University ARASOF-Nasugbu</span>
-              <span class="cert-date">Dec 2022</span>
-            </div>
-          </div>
-
-          <!-- Marketing & Analytics -->
           <div class="cert-card" data-category="marketing">
-            <div class="cert-icon">&#128200;</div>
-            <div class="cert-info">
-              <h4>Digital Skills: Digital Marketing</h4>
-              <span class="cert-issuer">Accenture</span>
-              <span class="cert-date">Apr 2026</span>
-            </div>
-          </div>
-
-          <div class="cert-card" data-category="marketing">
-            <div class="cert-icon">&#128269;</div>
-            <div class="cert-info">
-              <h4>SEO Certified</h4>
-              <span class="cert-issuer">HubSpot Academy</span>
-              <span class="cert-date">Feb 2026</span>
-            </div>
-          </div>
-
-          <div class="cert-card" data-category="marketing">
-            <div class="cert-icon">&#128202;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="bar-chart-3"></i></div>
             <div class="cert-info">
               <h4>Google Analytics Certification</h4>
               <span class="cert-issuer">Google</span>
               <span class="cert-date">Feb 2026</span>
             </div>
           </div>
-
           <div class="cert-card" data-category="marketing">
-            <div class="cert-icon">&#128270;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="search"></i></div>
+            <div class="cert-info">
+              <h4>SEO Certified</h4>
+              <span class="cert-issuer">HubSpot Academy</span>
+              <span class="cert-date">Feb 2026</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="marketing">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="search"></i></div>
             <div class="cert-info">
               <h4>On-Page SEO and AI Search Essentials</h4>
               <span class="cert-issuer">Semrush Academy</span>
               <span class="cert-date">Apr 2026</span>
             </div>
           </div>
-
-          <!-- Cloud -->
-          <div class="cert-card" data-category="cloud">
-            <div class="cert-icon">&#9729;&#65039;</div>
+          <div class="cert-card" data-category="marketing">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="trending-up"></i></div>
             <div class="cert-info">
-              <h4>Introduction to Microsoft Azure</h4>
-              <span class="cert-issuer">DataCamp</span>
-              <span class="cert-date">Feb 2026</span>
+              <h4>Digital Skills: Digital Marketing</h4>
+              <span class="cert-issuer">Accenture</span>
+              <span class="cert-date">Apr 2026</span>
             </div>
           </div>
-
-          <div class="cert-card" data-category="cloud">
-            <div class="cert-icon">&#9729;&#65039;</div>
+          <div class="cert-card" data-category="professional">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="award"></i></div>
             <div class="cert-info">
-              <h4>Understanding Microsoft Azure</h4>
-              <span class="cert-issuer">DataCamp</span>
-              <span class="cert-date">Feb 2026</span>
+              <h4>IT Specialist &ndash; Data Analytics</h4>
+              <span class="cert-issuer">Batangas State University ARASOF</span>
+              <span class="cert-date">May 2025</span>
             </div>
           </div>
-
-          <!-- Data Science & AI -->
+          <div class="cert-card" data-category="professional">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="database"></i></div>
+            <div class="cert-info">
+              <h4>IT Specialist &ndash; Databases</h4>
+              <span class="cert-issuer">Batangas State University ARASOF</span>
+              <span class="cert-date">May 2024</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="professional">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="file-text"></i></div>
+            <div class="cert-info">
+              <h4>Microsoft Office Specialist &ndash; Word</h4>
+              <span class="cert-issuer">Batangas State University ARASOF</span>
+              <span class="cert-date">Dec 2022</span>
+            </div>
+          </div>
           <div class="cert-card" data-category="data">
-            <div class="cert-icon">&#128187;</div>
-            <div class="cert-info">
-              <h4>Data Analytics Essentials</h4>
-              <span class="cert-issuer">Cisco</span>
-              <span class="cert-date">Dec 2024</span>
-            </div>
-          </div>
-
-          <div class="cert-card" data-category="data">
-            <div class="cert-icon">&#129504;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="bot"></i></div>
             <div class="cert-info">
               <h4>AI Fundamentals</h4>
               <span class="cert-issuer">IBM SkillsBuild</span>
               <span class="cert-date">Nov 2024</span>
             </div>
           </div>
-
           <div class="cert-card" data-category="data">
-            <div class="cert-icon">&#128013;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="code-2"></i></div>
             <div class="cert-info">
               <h4>Applied Data Science with Python</h4>
               <span class="cert-issuer">IBM SkillsBuild</span>
               <span class="cert-date">Nov 2024</span>
             </div>
           </div>
-
           <div class="cert-card" data-category="data">
-            <div class="cert-icon">&#128451;&#65039;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="database"></i></div>
             <div class="cert-info">
               <h4>Big Data Foundations (Level 1 &amp; 2)</h4>
               <span class="cert-issuer">IBM SkillsBuild</span>
               <span class="cert-date">Nov 2024</span>
             </div>
           </div>
-
-          <!-- UX & Professional -->
+          <div class="cert-card" data-category="data">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="bar-chart-3"></i></div>
+            <div class="cert-info">
+              <h4>Data Analytics Essentials</h4>
+              <span class="cert-issuer">Cisco</span>
+              <span class="cert-date">Dec 2024</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="cloud">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="cloud"></i></div>
+            <div class="cert-info">
+              <h4>Introduction to Microsoft Azure</h4>
+              <span class="cert-issuer">DataCamp</span>
+              <span class="cert-date">Feb 2026</span>
+            </div>
+          </div>
+          <div class="cert-card" data-category="cloud">
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="cloud"></i></div>
+            <div class="cert-info">
+              <h4>Understanding Microsoft Azure</h4>
+              <span class="cert-issuer">DataCamp</span>
+              <span class="cert-date">Feb 2026</span>
+            </div>
+          </div>
           <div class="cert-card" data-category="ux">
-            <div class="cert-icon">&#127912;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="pen-tool"></i></div>
             <div class="cert-info">
               <h4>Digital Skills: User Experience</h4>
               <span class="cert-issuer">Accenture</span>
               <span class="cert-date">Apr 2026</span>
             </div>
           </div>
-
           <div class="cert-card" data-category="ux">
-            <div class="cert-icon">&#128483;&#65039;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="message-square"></i></div>
             <div class="cert-info">
               <h4>Strategic Communication &amp; Teamwork</h4>
               <span class="cert-issuer">Santander Open Academy</span>
               <span class="cert-date">Apr 2026</span>
             </div>
           </div>
-
           <div class="cert-card" data-category="ux">
-            <div class="cert-icon">&#127760;</div>
+            <div class="cert-icon" aria-hidden="true"><i data-lucide="globe"></i></div>
             <div class="cert-info">
               <h4>English for IT 1 &amp; 2</h4>
               <span class="cert-issuer">Cisco</span>
@@ -384,120 +329,71 @@
       </div>
     </section>
 
-    <!-- FAQ Accordion (9 comprehensive questions) -->
     <section class="section reveal" id="faq" aria-label="Frequently asked questions">
       <div class="container">
-        <span class="section-label" style="justify-content:center">Frequently Asked Questions</span>
-        <h2 class="section-title" style="text-align:center">Everything you need to know.</h2>
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Quick answers before we start.</h2>
         <div class="faq-list">
-          <!-- 1. Pricing & Packages -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              1. What are your pricing and package models?
+            <button type="button" class="faq-question" aria-expanded="false">
+              1. How do pricing and packages work?
               <span class="faq-icon">+</span>
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              I provide tailored monthly retainer packages depending on your required scope: dedicated Social Media Management (with 90-day content calendars), Meta Ads campaign management, Google Business Profile local SEO, or end-to-end AI workflow automation via n8n. During our initial discovery conversation, I will assess your exact requirements and provide a transparent, flat-fee proposal. <!-- PLACEHOLDER: Insert your specific hourly or monthly retainer pricing tiers here -->
-            </div></div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Scopes are tailored to what you need&mdash;whether that's n8n automation, Meta Ads, local Google SEO,
+                social management, or a new site. After a quick message, I send a flat monthly or project quote.
+              </div>
+            </div>
           </div>
-
-          <!-- 2. Turnaround Time -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              2. What is your typical turnaround time for deliverables?
+            <button type="button" class="faq-question" aria-expanded="false">
+              2. How fast can we get started?
               <span class="faq-icon">+</span>
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              For initial onboardings, a full 90-day content calendar is delivered within 5 to 7 business days following asset handover. Ongoing social posts are scheduled at least 7 to 10 days in advance. Paid ad campaign configurations and n8n workflow automations typically take 3 to 5 business days from strategy approval.
-            </div></div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Meta Ads campaigns, Google Business updates, and core n8n lead workflows typically launch within 3 to 5
+                business days after access handover.
+              </div>
+            </div>
           </div>
-
-          <!-- 3. Tools Used -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              3. Which tools and software platforms do you work with?
+            <button type="button" class="faq-question" aria-expanded="false">
+              3. What timezone do you work in?
               <span class="faq-icon">+</span>
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              My core stack includes: <strong>n8n</strong> for AI workflow automation; <strong>Meta Business Suite &amp; Meta Ads Manager</strong> for social and paid media; <strong>Google Business Profile &amp; Google Analytics</strong> for local visibility and traffic tracking; <strong>Semrush &amp; HubSpot</strong> for SEO analysis and inbound alignment; <strong>Figma</strong> for UI/UX creative; and <strong>HTML5, CSS3, JavaScript, Git, React Native, and Laravel</strong> for front-end development tasks.
-            </div></div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Philippine Standard Time (PHT &middot; UTC+8), which overlaps closely with Australian business hours as
+                well as Asian and European mornings.
+              </div>
+            </div>
           </div>
-
-          <!-- 4. Working with a VA -->
           <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              4. How does collaborating with a dedicated Virtual Assistant work?
+            <button type="button" class="faq-question" aria-expanded="false">
+              4. How do we communicate?
               <span class="faq-icon">+</span>
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              As a Digital Marketing Specialist at Mintrix Virtual Assistants, I function as an integrated extension of your internal team. You delegate your marketing and automation initiatives to me, and I execute them independently, providing documented workflows, scheduled approvals, and bi-weekly catch-up calls so you retain total control without getting bogged down in daily execution.
-            </div></div>
-          </div>
-
-          <!-- 5. Reporting -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              5. How do you track and report campaign performance?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              You receive concise bi-weekly or monthly performance briefs featuring Google Analytics and Meta Business Suite metrics. We track reach, engagement rate, click-through rates, cost per lead, and Google Business Profile interactions. I highlight what worked, what needs refinement, and our prioritized action items for the upcoming cycle.
-            </div></div>
-          </div>
-
-          <!-- 6. Timezone -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              6. What timezone are you based in and what are your working hours?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              I am based in Nasugbu, Batangas, Philippines (<strong>Philippine Standard Time, PHT &middot; UTC+8</strong>). This timezone overlaps closely with Australian business hours (AEST/AEDT is only 2&ndash;3 hours ahead) as well as Asian and European morning schedules. All your scheduled posts and ad campaigns are timed strictly to your customers' local timezone.
-            </div></div>
-          </div>
-
-          <!-- 7. Communication -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              7. How will we communicate on a day-to-day basis?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              I adapt to your team's preferred communication rhythm &mdash; whether via Slack, Microsoft Teams, WhatsApp, Email, or Zoom/Google Meet for weekly syncs. For non-urgent matters, I respond within 24 business hours; for time-sensitive campaign updates, you have direct priority access.
-            </div></div>
-          </div>
-
-          <!-- 8. Web Development Services -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              8. Can you build or optimize our company website as well?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              Yes. Having served as a Front-End Developer intern at CertiCode and led the UI engineering for BatStateU's ExcelLens platform, I build responsive, accessible, mobile-first websites and landing pages in clean HTML5, CSS3, and JavaScript, as well as React Native and Laravel applications.
-            </div></div>
-          </div>
-
-          <!-- 9. Guarantee & Commitments -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              9. Do you guarantee specific revenue or follower numbers?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer"><div class="faq-answer-inner">
-              No genuine marketing professional can legally or ethically guarantee specific sales numbers or overnight virality, as algorithms, market dynamics, and pricing depend on factors outside of marketing alone. What I guarantee is strict operational consistency, clean data reporting, tested technical automations, and proactive optimization.
-            </div></div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Slack, WhatsApp, Email, Microsoft Teams, or Google Meet&mdash;whatever your team already uses. Replies
+                always land within 24 hours.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Closing CTA -->
     <section class="closing-cta reveal">
       <div class="container">
-        <h2>Ready to streamline your marketing operations?<br><span class="text-accent">Let&rsquo;s talk today.</span></h2>
-        <p>Book a direct discovery call and let&rsquo;s design a plan tailored to your business goals.</p>
-        <a href="index.html#contact" class="btn btn-primary">Get in touch &rarr;</a>
+        <h2>Want marketing and admin work handled directly?<br><span class="text-accent">Let&rsquo;s talk.</span></h2>
+        <p>Send a short message about your business and I'll reply within 24 hours.</p>
+        <a href="contact.html" class="btn btn-primary">
+          <span>Start a Project</span>
+          <i data-lucide="arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
     </section>
   </main>
@@ -506,39 +402,53 @@
   <footer class="footer-dark" role="contentinfo">
     <div class="footer-dark-inner">
       <div class="footer-top-grid">
-        <div class="footer-tagline-col">
-          <p class="footer-tagline-text">Create a Striking Digital Presence That Leaves a Lasting Impression.</p>
+          <div class="footer-tagline-col">
+          <a href="index.html" class="footer-logo-link" aria-label="Monzour Creatives Home">
+            <img src="images/logo.png" alt="Monzour Creatives" class="footer-logo-img">
+          </a>
+          <p class="footer-tagline-text">Clear marketing, fast websites, and working automations.</p>
         </div>
         <div class="footer-links-group">
           <div class="footer-nav-col">
             <span class="fnc-title">PAGES</span>
-            <a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#services">Services</a><a href="index.html#projects">Work</a><a href="index.html#articles">Blog</a><a href="index.html#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Case Studies</a>
+            <a href="articles.html">Notes</a>
+            <a href="contact.html">Contact</a>
           </div>
           <div class="footer-nav-col">
             <span class="fnc-title">SERVICES</span>
-            <a href="services/social-media.html">Social Media</a><a href="services/meta-ads.html">Meta Ads</a><a href="services/seo.html">Local SEO</a><a href="services/ai-automation.html">n8n Automation</a><a href="services/web-development.html">Web Design &amp; Dev</a>
+            <a href="services/ai-automation.html">n8n Automation</a>
+            <a href="services/meta-ads.html">Meta Ads</a>
+            <a href="services/seo.html">Local SEO</a>
+            <a href="services/web-development.html">Web Design &amp; Dev</a>
+            <a href="services/social-media.html">Social Media</a>
           </div>
           <div class="footer-nav-col">
-            <span class="fnc-title">CONNECT</span>
-            <a href="https://www.linkedin.com/in/ahly-monzour-babar-473a53365/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:ahlybabar1188@gmail.com">Email</a><a href="tel:+639476179440">Phone</a>
+            <span class="fnc-title">CONTACT</span>
+            <a href="mailto:monzourcreatives@gmail.com">monzourcreatives@gmail.com</a>
+            <a href="tel:+639476179440">+63 947 617 9440</a>
+            <a href="https://www.linkedin.com/in/ahly-monzour-babar-473a53365/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="footer-info-line">Nasugbu, Batangas, PH (UTC+8)</span>
           </div>
         </div>
       </div>
-      <div class="footer-wordmark-container" aria-hidden="true">
-        <span class="footer-giant-wordmark">Monzour</span>
-      </div>
       <div class="footer-bottom-bar">
         <p>&copy; 2026 Monzour Creatives. All rights reserved.</p>
-        <p>Freelance Digital Marketing Consultant &bull; Nasugbu, Batangas, PH</p>
+        <p>Ahly Monzour H. Babar &bull; Nasugbu, Batangas, PH</p>
       </div>
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button class="back-to-top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up" aria-hidden="true"></i>
   </button>
 
+  <script src="https://cdn.jsdelivr.net/npm/lucide@1.80.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

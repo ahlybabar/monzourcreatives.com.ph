@@ -5,67 +5,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Ahly Monzour Babar — Freelance Digital Marketing Consultant & AI Automation Specialist. Social media management, Meta Ads, SEO, n8n workflow automation, and web development.">
+    content="Ahly Monzour Babar — Digital Marketing, Local SEO, Meta Ads, n8n Workflow Automation, and Front-End Web Development.">
   <meta name="author" content="Ahly Monzour Babar">
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- Fonts: Bebas Neue (display) + DM Sans (body) + Playfair Display (editorial wordmark) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@1,400;1,600;1,700;1,900&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1.7.15/open-props.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Monzour Creatives | Freelance Digital Marketing Consultant</title>
+  <title>Monzour Creatives | Digital Marketing &amp; Automation</title>
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
   <a href="#main" class="skip-link">Skip to main content</a>
   <div class="nav-overlay" aria-hidden="true"></div>
 
   <!-- ===== HEADER ===== -->
   <header class="header" role="banner">
     <div class="hdr-inner">
-      <a href="index.html" class="logo" aria-label="Monzour Creatives Home"><img src="images/logo.png"
-          alt="Monzour Creatives" class="logo-img"></a>
+      <a href="index.html" class="logo" aria-label="Monzour Creatives Home">
+        <img src="images/logo.png" alt="Monzour Creatives" class="logo-img">
+      </a>
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav-link active">Home</a>
-        <a href="about.html" class="nav-link">About</a>
         <a href="#services" class="nav-link">Services</a>
-        <a href="#projects" class="nav-link">Work</a>
-        <a href="#articles" class="nav-link">Blog</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
         <div class="dropdown">
           <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
             Specialties
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
           </a>
           <div class="dropdown-menu" role="menu">
-            <a href="services/social-media.html" class="dropdown-item" role="menuitem">Social Media & Content
-              Calendars</a>
-            <a href="services/meta-ads.html" class="dropdown-item" role="menuitem">Meta Ads Management</a>
-            <a href="services/seo.html" class="dropdown-item" role="menuitem">SEO & Google Business Profile</a>
-            <a href="services/ai-automation.html" class="dropdown-item" role="menuitem">AI Workflow Automation (n8n)</a>
-            <a href="services/web-development.html" class="dropdown-item" role="menuitem">Website Design &
-              Development</a>
+            <a href="services/ai-automation.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="workflow" aria-hidden="true"></i>
+              <span>n8n Workflow Automation</span>
+            </a>
+            <a href="services/meta-ads.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="megaphone" aria-hidden="true"></i>
+              <span>Meta Ads &amp; Paid Social</span>
+            </a>
+            <a href="services/seo.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span>Local SEO &amp; Google Profile</span>
+            </a>
+            <a href="services/web-development.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="code-2" aria-hidden="true"></i>
+              <span>Web Design &amp; Development</span>
+            </a>
+            <a href="services/social-media.html" class="dropdown-item" role="menuitem">
+              <i data-lucide="calendar-days" aria-hidden="true"></i>
+              <span>Social Media Management</span>
+            </a>
           </div>
         </div>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
       <a href="#contact" class="hdr-pill-btn">
-        <span>Get In Touch</span>
-        <span class="hdr-pill-arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="7" y1="17" x2="17" y2="7" />
-            <polyline points="7 7 17 7 17 17" />
-          </svg>
+        <span>Work With Me</span>
+        <span class="hdr-pill-arrow" aria-hidden="true">
+          <i data-lucide="arrow-up-right"></i>
         </span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -73,958 +82,437 @@
 
   <main id="main">
 
-    <!-- ===== 1. HERO (SK Creative Style — Freelance Consultant Intro) ===== -->
+    <!-- ===== 1. HERO ===== -->
     <section class="hero-wrapper" aria-label="Introduction">
       <div class="hero-container">
-
-        <!-- Multiple "Monzour Creatives" Ambient Typography Backdrop -->
+        <!-- Moving Ambient Typography Watermark Backdrop -->
         <div class="hero-bg-watermark" aria-hidden="true">
           <div class="watermark-row row-left">
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
             <span>MONZOUR CREATIVES</span>
           </div>
           <div class="watermark-row row-right watermark-outline">
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
+            <span>MARKETING &amp; AUTOMATION</span><span class="wm-dot">&bull;</span>
+            <span>MARKETING &amp; AUTOMATION</span><span class="wm-dot">&bull;</span>
+            <span>MARKETING &amp; AUTOMATION</span><span class="wm-dot">&bull;</span>
+            <span>MARKETING &amp; AUTOMATION</span>
           </div>
           <div class="watermark-row row-left">
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-          </div>
-          <div class="watermark-row row-right watermark-outline">
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
-            <span>MONZOUR CREATIVES</span>
-            <span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
+            <span>MONZOUR CREATIVES</span><span class="wm-dot">&bull;</span>
             <span>MONZOUR CREATIVES</span>
           </div>
         </div>
 
-        <!-- Huge Center Logo replacing photo in the middle -->
-        <div class="hero-center-logo">
-          <div class="hero-logo-ambient-glow" aria-hidden="true"></div>
-        </div>
+        <div class="hero-inner">
+          <span class="hero-status-pill hero-animate">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available for new client projects &bull; Replies within 24h
+          </span>
 
-        <!-- Headline & CTA Row -->
-        <div class="hero-main-row">
-          <div class="hero-headline-col">
-            <span class="hero-eyebrow">FREELANCE DIGITAL MARKETING CONSULTANT</span>
-            <h1 class="hero-title">
-              I HELP YOUR<br>
-              BUSINESS<br>
-              GROW
-            </h1>
+          <div class="hero-main-grid">
+            <div class="hero-headline-col">
+              <span class="hero-eyebrow hero-animate">AHLY MONZOUR BABAR &mdash; MARKETING &amp; AUTOMATION</span>
+              <h1 class="hero-title">
+                MORE CLIENTS.<br>
+                LESS <span class="hero-title-accent">BUSYWORK.</span>
+              </h1>
+            </div>
+
+            <div class="hero-action-col hero-animate">
+              <p class="hero-bio">
+                I handle Meta Ads, local Google SEO, fast websites, and n8n workflow automation for small businesses.
+                You work directly with me&mdash;no account reps and no agency fluff.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#contact" class="hero-search-pill magnetic-btn">
+                  <span class="pill-label">Start a Project</span>
+                  <span class="pill-icon" aria-hidden="true">
+                    <i data-lucide="arrow-right"></i>
+                  </span>
+                </a>
+                <a href="#work" class="hero-secondary-link">
+                  <span>See My Work</span>
+                  <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-action-col">
-            <p class="hero-bio">
-              I've helped businesses learn how to navigate the digital landscape, amplify their online presence, and
-              drive meaningful results. If your business is looking for a dedicated freelance digital marketing
-              consultant, you've come to the right place.
-            </p>
-            <a href="#contact" class="hero-search-pill">
-              <span class="pill-label">Get In Touch</span>
-              <span class="pill-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+          <div class="hero-proof-bar hero-animate">
+            <div class="hero-proof-card">
+              <span class="hero-proof-icon hero-proof-icon--google" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                 </svg>
               </span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 5-Column Service Bar -->
-        <div class="hero-services-bar">
-          <div class="hero-service-item">
-            <span class="hs-num">01/</span>
-            <span class="hs-name">DIGITAL STRATEGY</span>
-          </div>
-          <div class="hero-service-item">
-            <span class="hs-num">02/</span>
-            <span class="hs-name">META ADS</span>
-          </div>
-          <div class="hero-service-item">
-            <span class="hs-num">03/</span>
-            <span class="hs-name">LOCAL SEO</span>
-          </div>
-          <div class="hero-service-item">
-            <span class="hs-num">04/</span>
-            <span class="hs-name">N8N AUTOMATION</span>
-          </div>
-          <div class="hero-service-item">
-            <span class="hs-num">05/</span>
-            <span class="hs-name">WEB DESIGN & DEV</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== CLIENT LOGOS / SOCIAL PROOF STRIP ===== -->
-    <section class="clients-strip" aria-label="Clients and trusted partners">
-      <div class="clients-strip-inner">
-        <div class="client-logo-item">
-          <img src="images/clients/melbourne-wide-logo.svg" alt="Melbourne Wide Electrical &amp; Plumbing"
-            onerror="this.outerHTML='<span class=\'client-txt-logo\'>MELBOURNE WIDE</span>'">
-        </div>
-        <div class="client-logo-item">
-          <img src="images/clients/mintrix-logo.svg" alt="Mintrix Virtual Assistants"
-            onerror="this.outerHTML='<span class=\'client-txt-logo\'>MINTRIX VA</span>'">
-        </div>
-        <div class="client-logo-item">
-          <span class="client-txt-logo">BATSTATEU ARASOF</span>
-        </div>
-        <div class="client-logo-item">
-          <span class="client-txt-logo">CERTICODE</span>
-        </div>
-        <div class="client-logo-item">
-          <span class="client-txt-logo">META BUSINESS</span>
-        </div>
-        <div class="client-logo-item">
-          <span class="client-txt-logo">HUBSPOT SEO</span>
-        </div>
-        <div class="client-logo-item">
-          <span class="client-txt-logo">GOOGLE ANALYTICS</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. THE PROBLEM (SK Creative-style Pain Points) ===== -->
-    <section class="problems-section reveal" id="the-problem">
-      <div class="problems-container">
-        <span class="sub-tag">// THE PROBLEM</span>
-        <h2 class="problems-heading">If you've landed here, you're likely facing some of these challenges.</h2>
-        <p class="problems-intro">
-          Every business has a unique problem. Here are some of the real-life quotes I've heard from clients on our
-          first call.
-        </p>
-
-        <div class="problems-grid">
-          <!-- Problem 1 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </span>
-              Competition
+              <span>5.0&#9733; rating across <strong class="hero-google-count" data-count="700" data-suffix="+">700+</strong> Google reviews supported</span>
             </div>
-            <p class="problem-quote">I work in a competitive industry and find it hard to stand out in the busy online
-              space.</p>
-          </div>
-
-          <!-- Problem 2 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-              </span>
-              Awareness
+            <div class="hero-proof-card">
+              <span class="hero-proof-icon" aria-hidden="true"><i data-lucide="workflow"></i></span>
+              <span>Marketing + front-end code + n8n automation in one place</span>
             </div>
-            <p class="problem-quote">I have a great product/service that people want to buy — my clients just don't
-              know about me.</p>
-          </div>
-
-          <!-- Problem 3 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                  <line x1="12" y1="9" x2="12" y2="13" />
-                  <line x1="12" y1="17" x2="12.01" y2="17" />
-                </svg>
-              </span>
-              Bad Marketing Agency
-            </div>
-            <p class="problem-quote">I'm with a marketing agency but feel like my business is never their priority.</p>
-          </div>
-
-          <!-- Problem 4 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                  <polyline points="2 17 12 22 22 17" />
-                  <polyline points="2 12 12 17 22 12" />
-                </svg>
-              </span>
-              Lack of Strategy
-            </div>
-            <p class="problem-quote">My current marketing lacks focus and structure — I'm posting but not seeing
-              results.</p>
-          </div>
-
-          <!-- Problem 5 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23" />
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </span>
-              Lead Generation
-            </div>
-            <p class="problem-quote">I struggle getting leads and when I do, they are generally not the right fit.</p>
-          </div>
-
-          <!-- Problem 6 -->
-          <div class="problem-card stagger-child">
-            <div class="problem-category">
-              <span class="problem-category-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-              </span>
-              Brand Inconsistency
-            </div>
-            <p class="problem-quote">My current website doesn't reflect what my business is about and I'm losing
-              potential customers.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 3. ABOUT SPLIT (How I Can Help / Direct Work Approach) ===== -->
-    <section class="about-section reveal" id="about">
-      <div class="about-grid">
-        <!-- Left: Red-lit portrait photo -->
-        <div class="about-photo-wrap">
-          <img src="images/ahly-portrait.jpg" alt="Ahly Monzour Babar - About" class="about-photo-img">
-        </div>
-
-        <!-- Right: Content & Stats -->
-        <div class="about-content">
-          <span class="sub-tag">// HOW I CAN HELP</span>
-          <h2 class="about-heading">
-            Unlike a traditional agency, you'll work directly with me — no account managers, no runaround.
-          </h2>
-          <p class="about-desc">
-            I'm Ahly Monzour Babar — a freelance digital marketing consultant and IT graduate based in Nasugbu,
-            Philippines. I work with small businesses and trade companies to help them cut through the noise with clear
-            digital strategy, sharp execution, and a focus on what works. You'll deal with someone who knows your
-            business inside out — because I'm the one doing the work.
-          </p>
-
-          <div class="about-pills-row">
-            <a href="#contact" class="pill-btn pill-btn--orange">
-              <span>GET IN TOUCH</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
-            <a href="about.html" class="pill-btn pill-btn--dark">ABOUT MY PROCESS</a>
-            <a href="about.html#certifications" class="pill-btn pill-btn--outline">15+ CERTS</a>
-          </div>
-
-          <!-- Stats Row -->
-          <div class="about-stats-row">
-            <div class="stat-box">
-              <span class="stat-big-num">700+</span>
-              <span class="stat-label-text">Google reviews maintained</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-big-num">99%</span>
-              <span class="stat-label-text">On-time campaign delivery</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-big-num">15+</span>
-              <span class="stat-label-text">Verified credentials & certs</span>
+            <div class="hero-proof-card">
+              <span class="hero-proof-icon" aria-hidden="true"><i data-lucide="clock"></i></span>
+              <span>Direct 1-on-1 collaboration &bull; PHT (UTC+8)</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 4. SERVICES SECTION (SK Creative-style 4 Service Pillars) ===== -->
+    <!-- ===== EXPERIENCE & STACK MOVING CAROUSEL ===== -->
+    <section class="clients-strip" aria-label="Experience and tools carousel">
+      <div class="clients-strip-header">
+        <span class="clients-label">Experience &amp; Stack</span>
+      </div>
+      <div class="stack-marquee">
+        <div class="stack-marquee-track">
+          <div class="client-logo-item">
+            <img src="images/clients/melbourne-wide-logo.svg" alt="Melbourne Wide Electrical and Plumbing">
+          </div>
+          <div class="client-logo-item client-logo-item--dark">
+            <img src="images/clients/mintrix-logo.svg" alt="Mintrix Virtual Assistants">
+          </div>
+          <span class="client-txt-logo">
+            <i data-lucide="bar-chart-3" style="width:15px;height:15px;color:var(--accent);" aria-hidden="true"></i>
+            BatStateU ARASOF
+          </span>
+          <span class="client-txt-logo">
+            <i data-lucide="code-2" style="width:15px;height:15px;color:var(--accent);" aria-hidden="true"></i>
+            CertiCode Makati
+          </span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/n8n" alt=""> n8n Automation</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/meta" alt=""> Meta Ads</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/googleanalytics" alt=""> Google Analytics</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/google" alt=""> Google Business</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/hubspot" alt=""> HubSpot SEO</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/semrush" alt=""> Semrush</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/figma" alt=""> Figma</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/javascript" alt=""> HTML / CSS / JS</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/python" alt=""> Python</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/react" alt=""> React Native</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/laravel" alt=""> Laravel</span>
+          <span class="stack-chip"><img src="https://cdn.simpleicons.org/git" alt=""> Git</span>
+          <!-- Seamless Duplicate Loop -->
+          <div class="client-logo-item" aria-hidden="true">
+            <img src="images/clients/melbourne-wide-logo.svg" alt="">
+          </div>
+          <div class="client-logo-item client-logo-item--dark" aria-hidden="true">
+            <img src="images/clients/mintrix-logo.svg" alt="">
+          </div>
+          <span class="client-txt-logo" aria-hidden="true">
+            <i data-lucide="bar-chart-3" style="width:15px;height:15px;color:var(--accent);" aria-hidden="true"></i>
+            BatStateU ARASOF
+          </span>
+          <span class="client-txt-logo" aria-hidden="true">
+            <i data-lucide="code-2" style="width:15px;height:15px;color:var(--accent);" aria-hidden="true"></i>
+            CertiCode Makati
+          </span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/n8n" alt=""> n8n Automation</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/meta" alt=""> Meta Ads</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/googleanalytics" alt=""> Google Analytics</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/google" alt=""> Google Business</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/hubspot" alt=""> HubSpot SEO</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/semrush" alt=""> Semrush</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/figma" alt=""> Figma</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/javascript" alt=""> HTML / CSS / JS</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/python" alt=""> Python</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/react" alt=""> React Native</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/laravel" alt=""> Laravel</span>
+          <span class="stack-chip" aria-hidden="true"><img src="https://cdn.simpleicons.org/git" alt=""> Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. SERVICES (4 Direct Pillars) ===== -->
     <section class="services-section reveal" id="services">
-      <div class="services-container">
-
-        <!-- Left: Heading & Intro -->
-        <div class="services-left-col">
-          <span class="sub-tag">// WHAT I DO</span>
-          <h2 class="services-main-heading">
-            Clear, tailored strategies<br>that cut through the noise.
-          </h2>
-          <p class="services-intro-text">
-            Not sure what's working in your marketing? Trying different tactics but getting nowhere? I can help you
-            cut through the noise with a clear digital strategy — one that's focused, practical, and built around your
-            goals.
+      <div class="services-wrap">
+        <div class="section-head">
+          <span class="sub-tag">// SERVICES</span>
+          <h2 class="section-heading">What I build and manage for you.</h2>
+          <p class="section-lead">
+            Straightforward services focused on bringing in steady inquiries and removing manual admin work.
           </p>
-          <a href="portfolio.html" class="pill-btn pill-btn--dark">
-            <span>EXPLORE SERVICES</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
         </div>
 
-        <!-- Right: 2x2 Grid of 4 Service Cards -->
         <div class="services-cards-grid">
 
-          <!-- Card 1: Digital Strategy (Vibrant Orange Card) -->
-          <div class="svc-card svc-card--orange">
+          <a href="services/ai-automation.html" class="svc-card svc-card--featured">
             <div class="svc-card-header">
-              <div class="svc-icon-box svc-icon-box--dark">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                  <polyline points="2 17 12 22 22 17" />
-                  <polyline points="2 12 12 17 22 12" />
-                </svg>
-              </div>
+              <div class="svc-icon-box" aria-hidden="true"><i data-lucide="workflow"></i></div>
               <span class="svc-num">01/</span>
             </div>
-            <h3 class="svc-title">Digital Marketing Strategy</h3>
+            <h3 class="svc-title">n8n Workflow &amp; AI Automation</h3>
             <p class="svc-desc">
-              Tailored strategies designed to cut through market noise — customer research, channel allocation, and
-              clear roadmaps built around your business goals.
+              Send web and ad leads straight into your CRM, spreadsheets, and instant SMS or email alerts so no inquiry
+              waits and copy-pasting disappears.
             </p>
-          </div>
+            <span class="svc-link-cue">
+              <span>See how it works</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </span>
+          </a>
 
-          <!-- Card 2: Meta Ads & Google Ads -->
-          <div class="svc-card svc-card--light">
+          <a href="services/meta-ads.html" class="svc-card">
             <div class="svc-card-header">
-              <div class="svc-icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
+              <div class="svc-icon-box" aria-hidden="true"><i data-lucide="megaphone"></i></div>
               <span class="svc-num">02/</span>
             </div>
-            <h3 class="svc-title">Meta Ads & Social Media Advertising</h3>
+            <h3 class="svc-title">Meta Ads &amp; Paid Social</h3>
             <p class="svc-desc">
-              Performance-driven paid campaigns across Facebook, Instagram, and LinkedIn — audience targeting, split
-              creative testing, retargeting, and transparent ROAS reporting.
+              Local Facebook and Instagram ad campaigns built around your service suburbs, split-tested creatives, and
+              clear cost-per-lead reporting.
             </p>
-          </div>
+            <span class="svc-link-cue">
+              <span>Explore Meta Ads</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </span>
+          </a>
 
-          <!-- Card 3: SEO & Google Business Profile -->
-          <div class="svc-card svc-card--light">
+          <a href="services/seo.html" class="svc-card">
             <div class="svc-card-header">
-              <div class="svc-icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-                </svg>
-              </div>
+              <div class="svc-icon-box" aria-hidden="true"><i data-lucide="map-pin"></i></div>
               <span class="svc-num">03/</span>
             </div>
-            <h3 class="svc-title">Local SEO & Google Business Profile</h3>
+            <h3 class="svc-title">Local SEO &amp; Google Business</h3>
             <p class="svc-desc">
-              Google Business Profile optimization, local citation management, review strategy, and search map rankings
-              to get found by nearby customers.
+              Keep your Google Business Profile active with real job photos, suburb updates, and clean on-page SEO so
+              nearby customers find and call you first.
             </p>
-          </div>
+            <span class="svc-link-cue">
+              <span>Explore Local SEO</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </span>
+          </a>
 
-          <!-- Card 4: Website Design & Development -->
-          <div class="svc-card svc-card--light">
+          <a href="services/web-development.html" class="svc-card">
             <div class="svc-card-header">
-              <div class="svc-icon-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-              </div>
+              <div class="svc-icon-box" aria-hidden="true"><i data-lucide="code-2"></i></div>
               <span class="svc-num">04/</span>
             </div>
-            <h3 class="svc-title">Website Design & Development</h3>
+            <h3 class="svc-title">Web Design &amp; Front-End Dev</h3>
             <p class="svc-desc">
-              Conversion-focused, custom-built websites and landing pages — crafted specifically for your brand, not
-              from generic templates. Built to look good and convert visitors into customers.
+              Fast, mobile-friendly websites and ad landing pages written in clean code so paid and organic traffic
+              turns into real quote requests.
             </p>
-          </div>
+            <span class="svc-link-cue">
+              <span>Explore Web Dev</span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </span>
+          </a>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== 5. WHO IT'S FOR / IDEAL CLIENT (SK Creative-style) ===== -->
-    <section class="ideal-client-section reveal" id="ideal-client">
-      <div class="ideal-client-container">
-
-        <div class="ideal-client-content">
-          <span class="sub-tag">// WHO IT'S FOR</span>
-          <h2 class="ideal-client-heading">
-            This is for you if you're a business owner ready to level up.
-          </h2>
-          <p class="ideal-client-desc">
-            I work best with business owners who have a proven product or service and are ready to grow their online
-            presence strategically.
-          </p>
-
-          <div class="ideal-client-checks">
-            <div class="ideal-check-item">
-              <span class="ideal-check-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </span>
-              <span class="ideal-check-text">You're a <strong>business owner</strong> with a proven product or service,
-                ready to elevate your company.</span>
-            </div>
-            <div class="ideal-check-item">
-              <span class="ideal-check-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </span>
-              <span class="ideal-check-text">You've already had some <strong>sales</strong>, indicating a healthy demand
-                for your service or product.</span>
-            </div>
-            <div class="ideal-check-item">
-              <span class="ideal-check-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </span>
-              <span class="ideal-check-text">You pride yourself on <strong>excellent service</strong>, evidenced by
-                5-star reviews or raving testimonials.</span>
-            </div>
-            <div class="ideal-check-item">
-              <span class="ideal-check-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </span>
-              <span class="ideal-check-text">You want to work with someone <strong>dedicated</strong> who treats your
-                business like their own.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visual Card -->
-        <div class="ideal-client-visual">
-          <div class="icv-heading">YOUR GROWTH<br>PARTNER</div>
-          <p class="icv-subtext">
-            You work directly with me — from the first call to campaign roll-out. No account managers, no junior staff,
-            no runaround. Just strategic advice, sharp execution, and results.
-          </p>
-          <div class="icv-stats-row">
-            <div class="icv-stat-box">
-              <span class="icv-stat-num">700+</span>
-              <span class="icv-stat-label">Reviews Maintained</span>
-            </div>
-            <div class="icv-stat-box">
-              <span class="icv-stat-num">15+</span>
-              <span class="icv-stat-label">Certifications</span>
-            </div>
-            <div class="icv-stat-box">
-              <span class="icv-stat-num">99%</span>
-              <span class="icv-stat-label">On-Time Delivery</span>
-            </div>
-            <div class="icv-stat-box">
-              <span class="icv-stat-num">24h</span>
-              <span class="icv-stat-label">Response Time</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== 6. HOW I WORK (SK Creative-style Process Steps) ===== -->
-    <section class="how-i-work-section reveal" id="process">
-      <div class="how-i-work-container">
-        <span class="sub-tag">// HOW I WORK</span>
-        <h2 class="how-i-work-heading">You work with me — from first call to campaign roll-out.</h2>
-        <p class="how-i-work-intro">
-          We refine the strategy together as things evolve. You're not getting shuffled between account managers, data
-          analysts, or junior staff who weren't in the room when we kicked off.
-        </p>
-
-        <div class="how-steps-grid">
-          <div class="how-step-card stagger-child">
-            <div class="how-step-num" aria-hidden="true"></div>
-            <h3 class="how-step-title">Discovery & Strategy</h3>
-            <p class="how-step-desc">
-              We start with a strategy call to understand your business, challenges, and goals. I build a tailored
-              digital roadmap — no cookie-cutter templates.
-            </p>
-          </div>
-
-          <div class="how-step-card stagger-child">
-            <div class="how-step-num" aria-hidden="true"></div>
-            <h3 class="how-step-title">Execution & Build</h3>
-            <p class="how-step-desc">
-              From content calendars and ad campaigns to website builds and SEO — I handle the work directly, keeping
-              you updated every step of the way.
-            </p>
-          </div>
-
-          <div class="how-step-card stagger-child">
-            <div class="how-step-num" aria-hidden="true"></div>
-            <h3 class="how-step-title">Optimize & Scale</h3>
-            <p class="how-step-desc">
-              We review performance data together, optimize what's working, cut what isn't, and scale the strategies
-              driving real results for your business.
-            </p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 7. BEST PROJECT (Charlotte Showcase Grid) ===== -->
-    <section class="portfolio-section reveal" id="projects">
+    <!-- ===== 3. SELECTED WORK (3 Concrete Proof Points) ===== -->
+    <section class="portfolio-section reveal" id="work">
       <div class="portfolio-container">
 
         <div class="portfolio-top-bar">
           <div>
-            <span class="sub-tag">// PORTFOLIO</span>
-            <h2 class="portfolio-heading">Best Project</h2>
+            <span class="sub-tag">// SELECTED WORK</span>
+            <h2 class="section-heading" style="margin-bottom:0;">Real projects, live results.</h2>
           </div>
-          <span class="portfolio-count">(2025–2026)</span>
+          <a href="portfolio.html" class="pill-btn pill-btn--dark">
+            <span>All Case Studies</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <div class="portfolio-grid-masonry">
+        <div class="work-grid-3">
 
-          <!-- Card 1: Full-width Featured Project (Melbourne Wide) -->
-          <a href="portfolio.html#melbourne-wide" class="project-showcase-card project-showcase-card--featured">
-            <div class="project-card-media media-knit-green">
-              <!-- Mockup Phone Device -->
-              <div class="phone-mockup">
-                <div class="phone-speaker"></div>
-                <div class="phone-screen screen-melbourne">
-                  <div class="mockup-header">
-                    <span class="mockup-logo">MELBOURNE WIDE</span>
-                    <span class="mockup-badge">★ 5.0</span>
-                  </div>
-                  <div class="mockup-hero-post">
-                    <div class="mockup-post-tag">ANOTHER WEEK. JOBS DONE RIGHT!</div>
-                    <div class="mockup-post-title">700+ Verified Reviews</div>
-                    <div class="mockup-post-sub">Licensed Trade Services &bull; Victoria</div>
-                  </div>
-                  <div class="mockup-post-stats">
-                    <div class="mp-stat"><span>Weekly</span>Carousels</div>
-                    <div class="mp-stat"><span>90-Day</span>Schedule</div>
-                    <div class="mp-stat"><span>100%</span>Adherence</div>
-                  </div>
+          <a href="portfolio.html#melbourne-wide" class="work-card">
+            <div class="work-card-banner work-banner--melbourne">
+              <img src="images/work-trades.jpg" alt="Licensed architectural lighting and trade installation"
+                class="work-banner-img">
+              <span class="work-banner-tag">Ongoing Client</span>
+              <div>
+                <div class="work-banner-metric">
+                  <span class="google-inline-badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                  </span>
+                  <span>5.0 &#9733; &bull; 700+ Google Reviews</span>
                 </div>
+                <div class="work-banner-sub">Melbourne, Australia</div>
               </div>
-              <span class="card-pill-tag">FEATURED CLIENT / 5.0 RATING</span>
             </div>
-            <div class="project-card-details">
+            <div class="work-card-body">
               <div class="pcd-tags">
-                <span>Social Media Admin</span>
-                <span>90-Day Calendar</span>
-                <span>Google Business Profile</span>
+                <span>Social Media</span>
+                <span>Google Business</span>
               </div>
               <h3 class="pcd-title">Melbourne Wide Electrical &amp; Plumbing</h3>
               <p class="pcd-desc">
-                Managing multi-channel social media and content calendars for a premier Thomastown trade brand rated 5.0
-                across 700+ Google reviews. Consistent weekly carousels and local search maintenance.
+                Managing ongoing social channels, weekly workmanship carousels, and Google Business Profile updates for
+                a licensed northern Melbourne trade team.
               </p>
+              <span class="pcd-more">
+                <span>Read case study</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </span>
             </div>
           </a>
 
-          <!-- Card 2: ExcelLens -->
-          <a href="portfolio.html#excellens" class="project-showcase-card">
-            <div class="project-card-media media-gradient-pastel">
-              <div class="phone-mockup phone-mockup--compact">
-                <div class="phone-speaker"></div>
-                <div class="phone-screen screen-excellens">
-                  <div class="mockup-chart-header">ExcelLens Analytics</div>
-                  <div class="mockup-chart-pill">BatStateU Deployed</div>
-                  <div class="mockup-chart-bars">
-                    <div class="mc-bar" style="height:60%"></div>
-                    <div class="mc-bar" style="height:85%"></div>
-                    <div class="mc-bar" style="height:45%"></div>
-                    <div class="mc-bar" style="height:95%"></div>
-                  </div>
-                  <div class="mockup-kpi">GPA 1.9 &bull; Production</div>
-                </div>
+          <a href="portfolio.html#automation-systems" class="work-card">
+            <div class="work-card-banner work-banner--n8n">
+              <img src="images/work-automation.jpg" alt="Automated lead routing analytics and reporting workflow"
+                class="work-banner-img">
+              <span class="work-banner-tag">n8n Automation</span>
+              <div>
+                <div class="work-banner-metric">Zero Manual Entry</div>
+                <div class="work-banner-sub">Webhooks &bull; CRM &bull; Alerts</div>
               </div>
-              <span class="card-pill-tag">RESEARCH / PRODUCTION</span>
             </div>
-            <div class="project-card-details">
-              <div class="pcd-tags"><span>Research Lead</span><span>Active Deployment</span></div>
-              <h3 class="pcd-title">ExcelLens — Student Analytics Platform</h3>
-              <p class="pcd-desc">Production academic performance analytics system deployed across BatStateU ARASOF
-                colleges.</p>
+            <div class="work-card-body">
+              <div class="pcd-tags">
+                <span>n8n</span>
+                <span>Meta Leads</span>
+              </div>
+              <h3 class="pcd-title">Automated Lead &amp; Reporting Pipelines</h3>
+              <p class="pcd-desc">
+                Custom n8n workflows routing ad and website inquiries straight into CRMs, Google Sheets, and instant
+                team alerts in seconds.
+              </p>
+              <span class="pcd-more">
+                <span>View workflow scope</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </span>
             </div>
           </a>
 
-          <!-- Card 3: CertiCode -->
-          <a href="portfolio.html#certicode" class="project-showcase-card">
-            <div class="project-card-media media-sky-blue">
-              <div class="phone-mockup phone-mockup--compact">
-                <div class="phone-speaker"></div>
-                <div class="phone-screen screen-certicode">
-                  <div class="mockup-code-header">&lt;CertiCode /&gt;</div>
-                  <div class="mockup-code-lines">
-                    <span class="cl cl-blue">class UIComponent {</span>
-                    <span class="cl cl-orange"> render() { return true; }</span>
-                    <span class="cl cl-green">} // Makati Internship</span>
-                  </div>
-                  <div class="mockup-code-badge">Agile Front-End</div>
-                </div>
+          <a href="portfolio.html#excellens" class="work-card">
+            <div class="work-card-banner work-banner--code">
+              <img src="images/work-systems.jpg" alt="Front-end UI engineering and web software workspace"
+                class="work-banner-img">
+              <span class="work-banner-tag">Software &amp; Web</span>
+              <div>
+                <div class="work-banner-metric">Live in Production</div>
+                <div class="work-banner-sub">BatStateU &amp; CertiCode</div>
               </div>
-              <span class="card-pill-tag">INTERNSHIP / WEB DEVELOPMENT</span>
             </div>
-            <div class="project-card-details">
-              <div class="pcd-tags"><span>HTML5/CSS3/JS</span><span>Git Version Control</span></div>
-              <h3 class="pcd-title">CertiCode — Web Application Systems</h3>
-              <p class="pcd-desc">Engineered production-ready UI components and responsive layouts in an Agile software
-                team in Makati.</p>
-            </div>
-          </a>
-
-          <!-- Card 4: n8n Automations -->
-          <a href="services/ai-automation.html" class="project-showcase-card">
-            <div class="project-card-media media-mesh-dark">
-              <div class="phone-mockup phone-mockup--compact">
-                <div class="phone-speaker"></div>
-                <div class="phone-screen screen-n8n">
-                  <div class="mockup-node-flow">
-                    <div class="mn-node">Webhook</div>
-                    <div class="mn-line">&darr;</div>
-                    <div class="mn-node mn-active">n8n AI Engine</div>
-                    <div class="mn-line">&darr;</div>
-                    <div class="mn-node">CRM / Meta Sync</div>
-                  </div>
-                </div>
+            <div class="work-card-body">
+              <div class="pcd-tags">
+                <span>UI Engineering</span>
+                <span>HTML / JS</span>
               </div>
-              <span class="card-pill-tag">AI AUTOMATION</span>
-            </div>
-            <div class="project-card-details">
-              <div class="pcd-tags"><span>n8n Engine</span><span>API Webhooks</span></div>
-              <h3 class="pcd-title">AI Workflow Automations for Client Operations</h3>
-              <p class="pcd-desc">Connecting incoming leads, CRM updates, and social publishing into automated
-                pipelines.</p>
-            </div>
-          </a>
-
-          <!-- Card 5: Meta Ads -->
-          <a href="services/meta-ads.html" class="project-showcase-card">
-            <div class="project-card-media media-track-amber">
-              <div class="phone-mockup phone-mockup--compact">
-                <div class="phone-speaker"></div>
-                <div class="phone-screen screen-ads">
-                  <div class="mockup-ads-header">Meta Ads Manager</div>
-                  <div class="mockup-ads-metric">
-                    <span class="mam-val">+142%</span>
-                    <span class="mam-lbl">ROAS Increase</span>
-                  </div>
-                  <div class="mockup-ads-status">&bull; Active Scaling</div>
-                </div>
-              </div>
-              <span class="card-pill-tag">GROWTH MARKETING</span>
-            </div>
-            <div class="project-card-details">
-              <div class="pcd-tags"><span>Meta Ads</span><span>Google Analytics</span></div>
-              <h3 class="pcd-title">Meta Ads Paid Campaigns & Conversion Optimization</h3>
-              <p class="pcd-desc">Targeted paid advertising setups focused on small business lead generation and
-                audience expansion.</p>
+              <h3 class="pcd-title">ExcelLens &amp; CertiCode Web Systems</h3>
+              <p class="pcd-desc">
+                Led UI engineering for BatStateU's ExcelLens academic analytics platform and shipped responsive
+                front-end components at CertiCode Makati.
+              </p>
+              <span class="pcd-more">
+                <span>See technical work</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </span>
             </div>
           </a>
 
         </div>
-
       </div>
     </section>
 
-    <!-- ===== 8. STATEMENT SECTION ("MARKETING WITH PURPOSE") ===== -->
-    <section class="statement-banner" aria-label="Philosophy">
-      <div class="statement-bg-portrait">
-        <img src="images/ahly-portrait.jpg" alt="Ahly Monzour Babar with laptop" class="statement-img">
-      </div>
-      <div class="statement-content">
-        <h2 class="statement-title">
-          MARKETING<br>WITH PURPOSE
-        </h2>
-        <p class="statement-sub">
-          Translating data, creative design, and technical automation into measurable growth that small businesses can
-          count on.
-        </p>
-        <a href="#contact" class="statement-pill-btn">
-          <span>GET IN TOUCH</span>
-          <span class="statement-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </span>
-        </a>
-      </div>
-    </section>
-
-    <!-- ===== 9. WORDS FROM CLIENTS (Testimonials with Arrows) ===== -->
-    <section class="testimonials-section reveal" id="testimonials">
-      <div class="testimonials-container">
-
-        <div class="testimonials-top-bar">
-          <h2 class="testimonials-heading">Words From Clients</h2>
-          <div class="testimonials-arrows">
-            <button class="t-arrow t-arrow--prev" aria-label="Previous testimonial">&#8592;</button>
-            <button class="t-arrow t-arrow--next" aria-label="Next testimonial">&#8594;</button>
+    <!-- ===== 4. ABOUT (Direct 1-on-1 Partner) ===== -->
+    <section class="about-section reveal" id="about">
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <img src="images/ahly-portrait.jpg" alt="Ahly Monzour Babar" class="about-photo-img">
+          <div class="about-photo-caption">
+            <span class="about-photo-name">Ahly Monzour H. Babar</span>
+            <span class="about-photo-meta">BSIT (1.9 GWA) &bull; Nasugbu, Batangas, PH</span>
           </div>
         </div>
 
-        <div class="testimonials-carousel" id="testimonialsCarousel">
+        <div class="about-content">
+          <span class="sub-tag">// ABOUT ME</span>
+          <h2 class="about-heading">
+            One specialist handling your marketing, code, and automation.
+          </h2>
+          <p class="about-desc">
+            I'm Ahly Monzour Babar&mdash;an Information Technology graduate from Batangas State University (1.9 GWA),
+            former front-end intern at CertiCode, and Digital Marketing &amp; AI Automation Specialist at Mintrix
+            Virtual Assistants.
+          </p>
+          <p class="about-desc" style="margin-top:-8px;">
+            Instead of passing your account between sales reps and junior staff, you work directly with me. That means
+            your ads, website, Google listing, and automated follow-ups stay connected and get updated fast.
+          </p>
 
-          <!-- Testimonial 1: Melbourne Wide -->
-          <div class="testimonial-card">
-            <div class="tc-header">
-              <div class="tc-avatar">MW</div>
-              <div class="tc-meta">
-                <strong class="tc-name">Melbourne Wide Electrical &amp; Plumbing</strong>
-                <span class="tc-role">Thomastown, Victoria &mdash; Ongoing Client</span>
-                <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              </div>
-              <div class="tc-quote-glyph">&rdquo;</div>
-            </div>
-            <p class="tc-body">
-              "Melbourne Wide has maintained a 5.0 Google rating across 700+ customer reviews throughout the period Ahly
-              has been managing our social media operations and content calendar. The weekly carousel posts are
-              consistent, on-brand, and go up without us lifting a finger."
-            </p>
-            <div class="tc-footer-tags">
-              <span>Social Media Management</span>
-              <span>Google Business Profile</span>
-            </div>
+          <div class="about-pills-row">
+            <a href="#contact" class="pill-btn pill-btn--orange">
+              <span>Start a Conversation</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="about.html" class="pill-btn pill-btn--outline">Full Background &amp; Certs</a>
           </div>
 
-          <!-- Testimonial 2: BatStateU -->
-          <div class="testimonial-card">
-            <div class="tc-header">
-              <div class="tc-avatar tc-avatar--alt">BS</div>
-              <div class="tc-meta">
-                <strong class="tc-name">BatStateU ARASOF-Nasugbu</strong>
-                <span class="tc-role">Academic Research Deployment &mdash; Production</span>
-                <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              </div>
-              <div class="tc-quote-glyph">&rdquo;</div>
+          <div class="about-stats-row">
+            <div class="stat-box">
+              <span class="stat-big-num" data-count="700" data-suffix="+">700+</span>
+              <span class="stat-label-text about-google-stat">
+                <span class="google-inline-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                </span>
+                <span>5.0&#9733; Google reviews supported</span>
+              </span>
             </div>
-            <p class="tc-body">
-              "ExcelLens, the student performance analytics platform Ahly led as research lead and developer, was
-              successfully deployed and remains in active production use across multiple university colleges. The
-              automated grading calculations and dynamic registrar reports work exactly as designed."
-            </p>
-            <div class="tc-footer-tags">
-              <span>Research & Development</span>
-              <span>Academic Analytics</span>
+            <div class="stat-box">
+              <span class="stat-big-num" data-count="15" data-suffix="+">15+</span>
+              <span class="stat-label-text">Google, HubSpot, Semrush &amp; IBM certs</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-big-num">24h</span>
+              <span class="stat-label-text">Direct reply turnaround</span>
             </div>
           </div>
-
         </div>
-
-        <!-- Muted Client Logos Footer under Testimonial -->
-        <div class="testimonials-logos-row">
-          <span>MELBOURNE WIDE</span>
-          <span>MINTRIX VA</span>
-          <span>BATSTATEU</span>
-          <span>CERTICODE</span>
-        </div>
-
       </div>
     </section>
 
-    <!-- ===== 10. LATEST INSIGHTS (3-Card Blog) ===== -->
-    <section class="articles-section reveal" id="articles">
-      <div class="articles-container">
-
-        <div class="articles-top-bar">
-          <div>
-            <span class="sub-tag">// BLOG</span>
-            <h2 class="articles-heading">Latest Insights From Monzour.</h2>
-          </div>
-          <a href="articles.html" class="pill-btn pill-btn--dark">ALL ARTICLES &rarr;</a>
-        </div>
-
-        <div class="articles-grid-3">
-
-          <a href="articles.html" class="article-preview-card">
-            <div class="article-card-thumb thumb-editorial-1">
-              <span class="article-thumb-badge">STRATEGY</span>
-            </div>
-            <div class="article-card-info">
-              <span class="article-cat-label">Digital Strategy</span>
-              <h3 class="article-title-text">Why a Clear Digital Strategy Changes Everything for Small Businesses</h3>
-              <span class="article-meta-date">Nov 2026 &bull; 4 min read</span>
-            </div>
-          </a>
-
-          <a href="articles.html" class="article-preview-card">
-            <div class="article-card-thumb thumb-editorial-2">
-              <span class="article-thumb-badge">AUTOMATION</span>
-            </div>
-            <div class="article-card-info">
-              <span class="article-cat-label">n8n Workflows</span>
-              <h3 class="article-title-text">How n8n Connects Your Leads, CRM, and Social Channels Without Code</h3>
-              <span class="article-meta-date">Oct 2026 &bull; 6 min read</span>
-            </div>
-          </a>
-
-          <a href="articles.html" class="article-preview-card">
-            <div class="article-card-thumb thumb-editorial-3">
-              <span class="article-thumb-badge">LOCAL SEO</span>
-            </div>
-            <div class="article-card-info">
-              <span class="article-cat-label">Google Business</span>
-              <h3 class="article-title-text">Google Business Profile: The Underrated Asset Most Businesses Ignore
-              </h3>
-              <span class="article-meta-date">Sep 2026 &bull; 5 min read</span>
-            </div>
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== 11. CONTACT SECTION (With Client Toolkit Highlight) ===== -->
-    <section class="contact-section" id="contact">
+    <!-- ===== 5. CONTACT (PHP Mailer to monzourcreatives@gmail.com) ===== -->
+    <section class="contact-section reveal" id="contact">
       <div class="contact-container">
 
-        <!-- Left: Heading & Details -->
         <div class="contact-left-col">
           <span class="sub-tag">// CONTACT</span>
           <h2 class="contact-main-heading">
-            Fill Out Our Form To<br>Get In Touch.
+            Let&rsquo;s talk about your project.
           </h2>
-
-          <!-- CLIENT TOOLKIT HIGHLIGHT -->
-          <div class="toolkit-highlight">
-            <div class="toolkit-header">
-              <span class="toolkit-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 12 20 22 4 22 4 12" />
-                  <rect x="2" y="7" width="20" height="5" />
-                  <line x1="12" y1="22" x2="12" y2="7" />
-                  <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
-                  <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
-                </svg>
-              </span>
-              <span class="toolkit-title">Client Onboarding Toolkit</span>
-              <span class="toolkit-badge">FREE</span>
-            </div>
-            <p class="toolkit-desc">
-              Once you submit this form, you'll receive our complete Client Onboarding Toolkit — everything you need to
-              get started, delivered straight to your inbox.
-            </p>
-            <div class="toolkit-items">
-              <div class="toolkit-item">
-                <span class="toolkit-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                Client Portal Access
-              </div>
-              <div class="toolkit-item">
-                <span class="toolkit-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                Brand Questionnaire
-              </div>
-              <div class="toolkit-item">
-                <span class="toolkit-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                Project Timeline
-              </div>
-              <div class="toolkit-item">
-                <span class="toolkit-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                Communication Guide
-              </div>
-            </div>
-          </div>
+          <p class="contact-intro-text">
+            Tell me what you're trying to fix or automate. I reply within 24 hours with a straightforward plan and next
+            steps.
+          </p>
 
           <div class="contact-info-list">
             <div class="contact-info-item">
               <span class="cii-label">EMAIL</span>
-              <a href="mailto:ahlybabar1188@gmail.com" class="cii-val">ahlybabar1188@gmail.com</a>
+              <div class="cii-val-row">
+                <a href="mailto:monzourcreatives@gmail.com" class="cii-val">monzourcreatives@gmail.com</a>
+                <button type="button" class="copy-email-btn" data-email="monzourcreatives@gmail.com">
+                  <i data-lucide="copy" aria-hidden="true"></i>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
             </div>
             <div class="contact-info-item">
               <span class="cii-label">PHONE</span>
               <a href="tel:+639476179440" class="cii-val">+63 947 617 9440</a>
             </div>
             <div class="contact-info-item">
-              <span class="cii-label">LOCATION</span>
-              <span class="cii-val">Nasugbu, Batangas, Philippines</span>
-            </div>
-            <div class="contact-info-item">
-              <span class="cii-label">TIMEZONE</span>
-              <span class="cii-val">Philippine Standard Time &bull; PHT (UTC+8)</span>
+              <span class="cii-label">LOCATION &amp; TIMEZONE</span>
+              <span class="cii-val">Nasugbu, Batangas, PH &bull; PHT (UTC+8)</span>
             </div>
             <div class="contact-info-item">
               <span class="cii-label">LINKEDIN</span>
@@ -1034,66 +522,67 @@
           </div>
         </div>
 
-        <!-- Right: Floating Form Card -->
         <div class="contact-right-col">
           <div class="contact-card-box">
-            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <form id="contact-form" action="send-mail.php" method="POST" novalidate>
+              <!-- Honeypot spam trap -->
+              <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
 
               <div class="form-dual-row">
                 <div class="form-group">
                   <label class="form-label" for="cf-first-name">First Name</label>
-                  <input class="form-input" id="cf-first-name" name="first_name" type="text" placeholder="John"
-                    required>
+                  <input class="form-input" id="cf-first-name" name="first_name" type="text" placeholder="Alex" required>
                   <span class="form-error">Please enter your first name.</span>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="cf-last-name">Last Name</label>
-                  <input class="form-input" id="cf-last-name" name="last_name" type="text" placeholder="Doe" required>
+                  <input class="form-input" id="cf-last-name" name="last_name" type="text" placeholder="Morgan" required>
                   <span class="form-error">Please enter your last name.</span>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="cf-email">Email Address</label>
-                <input class="form-input" id="cf-email" name="email" type="email" placeholder="john@example.com"
+                <input class="form-input" id="cf-email" name="email" type="email" placeholder="alex@company.com"
                   required>
                 <span class="form-error">Please enter a valid email.</span>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="cf-business">Business Name</label>
-                <input class="form-input" id="cf-business" name="business_name" type="text"
-                  placeholder="Your Business Pty Ltd">
+              <div class="form-dual-row">
+                <div class="form-group">
+                  <label class="form-label" for="cf-business">Business Name</label>
+                  <input class="form-input" id="cf-business" name="business_name" type="text" placeholder="Optional">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cf-phone">Phone (optional)</label>
+                  <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+61 400 000 000">
+                </div>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="cf-phone">Phone Number</label>
-                <input class="form-input" id="cf-phone" name="phone" type="tel" placeholder="+61 400 000 000">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="cf-service">Service Needed</label>
+                <label class="form-label" for="cf-service">What Do You Need Help With?</label>
                 <select class="form-input" id="cf-service" name="service">
-                  <option value="">Select a service...</option>
-                  <option>Digital Marketing Strategy</option>
-                  <option>Meta Ads & Social Media Advertising</option>
-                  <option>SEO & Google Business Profile</option>
-                  <option>Website Design & Development</option>
-                  <option>n8n AI Workflow Automation</option>
-                  <option>Full Marketing Retainer</option>
+                  <option value="">Select an area...</option>
+                  <option>n8n Workflow Automation</option>
+                  <option>Meta Ads &amp; Paid Social</option>
+                  <option>Local SEO &amp; Google Business Profile</option>
+                  <option>Website Design &amp; Development</option>
+                  <option>Social Media Management</option>
+                  <option>Combined Marketing &amp; Automation</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="cf-message">Message</label>
                 <textarea class="form-input form-textarea" id="cf-message" name="message"
-                  placeholder="Tell me about your business goals and what you need..." required></textarea>
-                <span class="form-error">Please enter a message.</span>
+                  placeholder="Briefly share what your business does and what you want to solve first..."
+                  required></textarea>
+                <span class="form-error">Please enter a short message.</span>
               </div>
 
               <button type="submit" class="contact-submit-pill">
-                <span>SEND MESSAGE & GET TOOLKIT</span>
-                <span class="btn-arrow">&rarr;</span>
+                <span>SEND MESSAGE</span>
+                <span class="btn-arrow" aria-hidden="true"><i data-lucide="send"></i></span>
               </button>
 
               <div class="form-status" role="alert"></div>
@@ -1106,15 +595,17 @@
 
   </main>
 
-  <!-- ===== GIANT WORDMARK FOOTER ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer-dark" role="contentinfo">
     <div class="footer-dark-inner">
 
-      <!-- Top Row: Tagline + Navigation Links -->
       <div class="footer-top-grid">
         <div class="footer-tagline-col">
+          <a href="index.html" class="footer-logo-link" aria-label="Monzour Creatives Home">
+            <img src="images/logo.png" alt="Monzour Creatives" class="footer-logo-img">
+          </a>
           <p class="footer-tagline-text">
-            Create a Striking Digital Presence That Leaves a Lasting Impression.
+            Clear marketing, fast websites, and working automations.
           </p>
         </div>
 
@@ -1123,53 +614,48 @@
             <span class="fnc-title">PAGES</span>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Work</a>
-            <a href="#articles">Blog</a>
-            <a href="#contact">Contact</a>
+            <a href="portfolio.html">Case Studies</a>
+            <a href="articles.html">Notes</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="footer-nav-col">
             <span class="fnc-title">SERVICES</span>
-            <a href="services/social-media.html">Social Media</a>
+            <a href="services/ai-automation.html">n8n Automation</a>
             <a href="services/meta-ads.html">Meta Ads</a>
             <a href="services/seo.html">Local SEO</a>
-            <a href="services/ai-automation.html">n8n Automation</a>
-            <a href="services/web-development.html">Web Design & Dev</a>
+            <a href="services/web-development.html">Web Design &amp; Dev</a>
+            <a href="services/social-media.html">Social Media</a>
           </div>
 
           <div class="footer-nav-col">
-            <span class="fnc-title">CONNECT</span>
+            <span class="fnc-title">CONTACT</span>
+            <a href="mailto:monzourcreatives@gmail.com">monzourcreatives@gmail.com</a>
+            <a href="tel:+639476179440">+63 947 617 9440</a>
             <a href="https://www.linkedin.com/in/ahly-monzour-babar-473a53365/" target="_blank"
               rel="noopener">LinkedIn</a>
-            <a href="mailto:ahlybabar1188@gmail.com">Email</a>
-            <a href="tel:+639476179440">Phone</a>
+            <span class="footer-info-line">Nasugbu, Batangas, PH (UTC+8)</span>
           </div>
         </div>
       </div>
 
-      <!-- CENTERPIECE: GIANT ITALIC WORDMARK -->
-      <div class="footer-wordmark-container" aria-hidden="true">
-        <span class="footer-giant-wordmark">Monzour</span>
-      </div>
-
-      <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
         <p>&copy; 2026 Monzour Creatives. All rights reserved.</p>
-        <p>Freelance Digital Marketing Consultant &bull; Nasugbu, Batangas, PH</p>
+        <p>Ahly Monzour H. Babar &bull; Nasugbu, Batangas, PH</p>
       </div>
 
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button class="back-to-top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <i data-lucide="arrow-up" aria-hidden="true"></i>
   </button>
 
+  <script src="https://cdn.jsdelivr.net/npm/lucide@1.80.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/main.js"></script>
 </body>
 
