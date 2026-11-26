@@ -355,7 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalHTML = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<span>SENDING...</span>';
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.75';
 
@@ -374,21 +373,93 @@ document.addEventListener('DOMContentLoaded', () => {
       const mailtoHref = `mailto:monzourcreatives@gmail.com?subject=${subject}&body=${body}`;
       const linkStyle = 'color:#FF9E80;text-decoration:underline;font-weight:700;';
 
+      /* ---- Animated loading modal ---- */
+      const hasSwal = typeof Swal !== 'undefined';
+      let progressInterval;
+
+      if (hasSwal) {
+        Swal.fire({
+          title: 'Sending your message...',
+          html: `
+            <div style="margin:18px 0 6px">
+              <div style="background:rgba(255,255,255,0.08);border-radius:999px;height:8px;overflow:hidden;width:100%">
+                <div id="mc-send-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#D95B38,#FF9E80);border-radius:999px;transition:width .3s ease"></div>
+              </div>
+              <p id="mc-send-status" style="margin:12px 0 0;font-size:0.85rem;opacity:0.7">Connecting to server...</p>
+            </div>`,
+          background: '#1A1D25',
+          color: '#F7F6F2',
+          backdrop: 'rgba(13, 15, 20, 0.78)',
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          showConfirmButton: false,
+          customClass: { popup: 'mc-swal-popup' },
+          didOpen: () => {
+            const bar = document.getElementById('mc-send-bar');
+            const status = document.getElementById('mc-send-status');
+            const steps = [
+              { pct: 25, text: 'Preparing your message...', delay: 400 },
+              { pct: 50, text: 'Delivering to inbox...', delay: 900 },
+              { pct: 75, text: 'Almost there...', delay: 1800 },
+              { pct: 88, text: 'Finishing up...', delay: 3000 },
+            ];
+            steps.forEach(({ pct, text, delay }) => {
+              setTimeout(() => {
+                if (bar) bar.style.width = pct + '%';
+                if (status) status.textContent = text;
+              }, delay);
+            });
+          },
+        });
+      } else {
+        submitBtn.innerHTML = '<span>SENDING...</span>';
+      }
+
       const showSuccessModal = (msg) => {
         form.reset();
         statusEl.style.display = 'none';
         statusEl.textContent = '';
 
-        if (typeof Swal !== 'undefined') {
+        if (hasSwal) {
+          const bar = document.getElementById('mc-send-bar');
+          const status = document.getElementById('mc-send-status');
+          if (bar) bar.style.width = '100%';
+          if (status) status.textContent = 'Delivered!';
+
+          setTimeout(() => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Message Sent!',
+              html: msg || "Thanks for reaching out! I'll reply within 24 hours.",
+              confirmButtonText: 'Got it',
+              confirmButtonColor: '#D95B38',
+              background: '#1A1D25',
+              color: '#F7F6F2',
+              iconColor: '#4ADE80',
+              backdrop: 'rgba(13, 15, 20, 0.78)',
+              customClass: {
+                popup: 'mc-swal-popup',
+                confirmButton: 'mc-swal-confirm',
+              },
+            });
+          }, 500);
+        } else {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = msg || "Message sent! I'll reply within 24 hours.";
+          statusEl.style.display = 'block';
+        }
+      };
+
+      const showErrorModal = (errMsg) => {
+        if (hasSwal) {
           Swal.fire({
-            icon: 'success',
-            title: 'Message Sent!',
-            html: msg || "Thanks for reaching out! I'll reply within 24 hours.",
-            confirmButtonText: 'Got it',
+            icon: 'error',
+            title: 'Oops!',
+            html: `${errMsg} <a href="${mailtoHref}" style="${linkStyle}">Send via email app instead</a>.`,
+            confirmButtonText: 'OK',
             confirmButtonColor: '#D95B38',
             background: '#1A1D25',
             color: '#F7F6F2',
-            iconColor: '#4ADE80',
             backdrop: 'rgba(13, 15, 20, 0.78)',
             customClass: {
               popup: 'mc-swal-popup',
@@ -396,8 +467,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
           });
         } else {
-          statusEl.className = 'form-status success';
-          statusEl.textContent = msg || "Message sent! I'll reply within 24 hours.";
+          statusEl.className = 'form-status error';
+          statusEl.innerHTML = `${errMsg} <a href="${mailtoHref}" style="${linkStyle}">Send via email app instead</a>.`;
           statusEl.style.display = 'block';
         }
       };
@@ -470,9 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       } catch (err) {
-        statusEl.className = 'form-status error';
-        statusEl.innerHTML = `${err.message || 'Could not send message right now.'} <a href="${mailtoHref}" style="${linkStyle}">Send via email app instead</a>.`;
-        statusEl.style.display = 'block';
+        showErrorModal(err.message || 'Could not send message right now.');
       }
 
       submitBtn.innerHTML = originalHTML;
