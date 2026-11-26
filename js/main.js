@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Swal.fire({
             icon: 'success',
             title: 'Message Sent!',
-            text: msg || "Thanks for reaching out. I'll reply within 24 hours.",
+            html: msg || "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours.",
             confirmButtonText: 'Got it',
             confirmButtonColor: '#D95B38',
             background: '#1A1D25',
@@ -402,31 +402,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      const sendViaFormSubmit = async () => {
-        const res = await fetch('https://formsubmit.co/ajax/monzourcreatives@gmail.com', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            name: `${firstName} ${lastName}`.trim(),
-            email,
-            business,
-            phone,
-            service,
-            message,
-            _subject: `New Portfolio Inquiry: ${service} — ${firstName} ${lastName}`,
-            _replyto: email,
-            _template: 'table',
-            _honey: form.querySelector('[name="website"]')?.value || '',
-          }),
-        });
-        const result = await res.json().catch(() => ({}));
-        if (!res.ok || (result.success !== 'true' && result.success !== true)) {
-          throw new Error(result.message || 'Could not deliver message via FormSubmit.');
-        }
-        return result;
+      const sendViaMailto = () => {
+        const mailtoLink = document.createElement('a');
+        mailtoLink.href = mailtoHref;
+        mailtoLink.style.display = 'none';
+        document.body.appendChild(mailtoLink);
+        mailtoLink.click();
+        document.body.removeChild(mailtoLink);
       };
 
       try {
@@ -434,10 +416,17 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error('local-file-preview');
         }
 
-        const isStaticHost = window.location.hostname.endsWith('github.io');
+        const isStaticHost =
+          window.location.hostname.endsWith('github.io') ||
+          window.location.hostname.endsWith('netlify.app') ||
+          window.location.hostname.endsWith('vercel.app') ||
+          window.location.hostname.endsWith('pages.dev');
+
         if (isStaticHost) {
-          await sendViaFormSubmit();
-          showSuccessModal("Message sent! I'll reply within 24 hours.");
+          sendViaMailto();
+          showSuccessModal(
+            "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
+          );
         } else {
           const formData = new FormData(form);
           const response = await fetch(form.getAttribute('action') || 'send-mail.php', {
@@ -448,8 +437,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const contentType = response.headers.get('content-type') || '';
           if (!contentType.includes('application/json')) {
-            await sendViaFormSubmit();
-            showSuccessModal("Message sent! I'll reply within 24 hours.");
+            sendViaMailto();
+            showSuccessModal(
+              "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
+            );
           } else {
             const data = await response.json();
             if (response.ok && data.ok) {
@@ -464,17 +455,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       } catch (err) {
-        statusEl.className = 'form-status error';
-        const isUnreachable =
-          err.message === 'local-file-preview' ||
-          err.message === 'non-php-server' ||
-          err.name === 'TypeError' ||
-          /fetch|network/i.test(err.message || '');
-
-        statusEl.innerHTML = isUnreachable
-          ? `This preview URL is not running PHP for <code>send-mail.php</code> (host via XAMPP or a PHP server to send directly). <a href="${mailtoHref}" style="${linkStyle}">Click here to open your email app with this message pre-filled</a> or copy <a href="mailto:monzourcreatives@gmail.com" style="${linkStyle}">monzourcreatives@gmail.com</a>.`
-          : `${err.message || 'Could not send message right now.'} <a href="${mailtoHref}" style="${linkStyle}">Send via email app instead</a>.`;
-        statusEl.style.display = 'block';
+        // Last-resort fallback: open mailto and show success modal
+        sendViaMailto();
+        showSuccessModal(
+          "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
+        );
       }
 
       submitBtn.innerHTML = originalHTML;
