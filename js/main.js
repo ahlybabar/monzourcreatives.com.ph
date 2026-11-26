@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const sendViaFormSubmit = async () => {
-        const res = await fetch('https://formsubmit.co/ajax/monzourcreatives@gmail.com', {
+        const res = await fetch('https://formsubmit.co/ajax/f20b2f8fb00c1fcf8db507d5fef05310', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
