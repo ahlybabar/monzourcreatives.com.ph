@@ -374,56 +374,94 @@ document.addEventListener('DOMContentLoaded', () => {
       const mailtoHref = `mailto:monzourcreatives@gmail.com?subject=${subject}&body=${body}`;
       const linkStyle = 'color:#FF9E80;text-decoration:underline;font-weight:700;';
 
+      const showSuccessModal = (msg) => {
+        form.reset();
+        statusEl.style.display = 'none';
+        statusEl.textContent = '';
+
+        if (typeof Swal !== 'undefined') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: msg || "Thanks for reaching out. I'll reply within 24 hours.",
+            confirmButtonText: 'Got it',
+            confirmButtonColor: '#D95B38',
+            background: '#1A1D25',
+            color: '#F7F6F2',
+            iconColor: '#4ADE80',
+            backdrop: 'rgba(13, 15, 20, 0.78)',
+            customClass: {
+              popup: 'mc-swal-popup',
+              confirmButton: 'mc-swal-confirm',
+            },
+          });
+        } else {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = msg || "Message sent! I'll reply within 24 hours.";
+          statusEl.style.display = 'block';
+        }
+      };
+
+      const sendViaFormSubmit = async () => {
+        const res = await fetch('https://formsubmit.co/ajax/monzourcreatives@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: `${firstName} ${lastName}`.trim(),
+            email,
+            business,
+            phone,
+            service,
+            message,
+            _subject: `New Portfolio Inquiry: ${service} — ${firstName} ${lastName}`,
+            _replyto: email,
+            _template: 'table',
+            _honey: form.querySelector('[name="website"]')?.value || '',
+          }),
+        });
+        const result = await res.json().catch(() => ({}));
+        if (!res.ok || (result.success !== 'true' && result.success !== true)) {
+          throw new Error(result.message || 'Could not deliver message via FormSubmit.');
+        }
+        return result;
+      };
+
       try {
         if (window.location.protocol === 'file:') {
           throw new Error('local-file-preview');
         }
 
-        const formData = new FormData(form);
-        const response = await fetch(form.getAttribute('action') || 'send-mail.php', {
-          method: 'POST',
-          body: formData,
-          headers: { Accept: 'application/json' },
-        });
-
-        const contentType = response.headers.get('content-type') || '';
-        if (!contentType.includes('application/json')) {
-          throw new Error('non-php-server');
-        }
-
-        const data = await response.json();
-        if (response.ok && data.ok) {
-          form.reset();
-          statusEl.style.display = 'none';
-          statusEl.textContent = '';
-
-          if (typeof Swal !== 'undefined') {
-            Swal.fire({
-              icon: 'success',
-              title: 'Message Sent!',
-              text: data.message || "Thanks for reaching out. I'll reply within 24 hours.",
-              confirmButtonText: 'Got it',
-              confirmButtonColor: '#D95B38',
-              background: '#1A1D25',
-              color: '#F7F6F2',
-              iconColor: '#4ADE80',
-              backdrop: 'rgba(13, 15, 20, 0.78)',
-              customClass: {
-                popup: 'mc-swal-popup',
-                confirmButton: 'mc-swal-confirm',
-              },
-            });
-          } else {
-            statusEl.className = 'form-status success';
-            statusEl.textContent = data.message || "Message sent! I'll reply within 24 hours.";
-            statusEl.style.display = 'block';
-          }
-        } else if (data.needs_smtp_key) {
-          statusEl.className = 'form-status error';
-          statusEl.innerHTML = `PHP Mailer needs a Gmail App Password in <code>mail-config.php</code>. <a href="${mailtoHref}" style="${linkStyle}">Send via email app (pre-filled)</a> or email <a href="mailto:monzourcreatives@gmail.com" style="${linkStyle}">monzourcreatives@gmail.com</a>.`;
-          statusEl.style.display = 'block';
+        const isStaticHost = window.location.hostname.endsWith('github.io');
+        if (isStaticHost) {
+          await sendViaFormSubmit();
+          showSuccessModal("Message sent! I'll reply within 24 hours.");
         } else {
-          throw new Error(data.error || 'Submission failed');
+          const formData = new FormData(form);
+          const response = await fetch(form.getAttribute('action') || 'send-mail.php', {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' },
+          });
+
+          const contentType = response.headers.get('content-type') || '';
+          if (!contentType.includes('application/json')) {
+            await sendViaFormSubmit();
+            showSuccessModal("Message sent! I'll reply within 24 hours.");
+          } else {
+            const data = await response.json();
+            if (response.ok && data.ok) {
+              showSuccessModal(data.message);
+            } else if (data.needs_smtp_key) {
+              statusEl.className = 'form-status error';
+              statusEl.innerHTML = `PHP Mailer needs a Gmail App Password in <code>mail-config.php</code>. <a href="${mailtoHref}" style="${linkStyle}">Send via email app (pre-filled)</a> or email <a href="mailto:monzourcreatives@gmail.com" style="${linkStyle}">monzourcreatives@gmail.com</a>.`;
+              statusEl.style.display = 'block';
+            } else {
+              throw new Error(data.error || 'Submission failed');
+            }
+          }
         }
       } catch (err) {
         statusEl.className = 'form-status error';
