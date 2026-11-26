@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
           Swal.fire({
             icon: 'success',
             title: 'Message Sent!',
-            html: msg || "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours.",
+            html: msg || "Thanks for reaching out! I'll reply within 24 hours.",
             confirmButtonText: 'Got it',
             confirmButtonColor: '#D95B38',
             background: '#1A1D25',
@@ -402,13 +402,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      const sendViaMailto = () => {
-        const mailtoLink = document.createElement('a');
-        mailtoLink.href = mailtoHref;
-        mailtoLink.style.display = 'none';
-        document.body.appendChild(mailtoLink);
-        mailtoLink.click();
-        document.body.removeChild(mailtoLink);
+      const sendViaFormSubmit = async () => {
+        const res = await fetch('https://formsubmit.co/ajax/monzourcreatives@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: `${firstName} ${lastName}`.trim(),
+            email,
+            business,
+            phone,
+            service,
+            message,
+            _subject: `New Portfolio Inquiry: ${service} — ${firstName} ${lastName}`,
+            _replyto: email,
+            _template: 'table',
+            _captcha: 'false',
+          }),
+        });
+        if (!res.ok) throw new Error('FormSubmit delivery failed');
+        const result = await res.json().catch(() => ({}));
+        if (result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'FormSubmit delivery failed');
+        }
+        return result;
       };
 
       try {
@@ -423,10 +442,8 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.hostname.endsWith('pages.dev');
 
         if (isStaticHost) {
-          sendViaMailto();
-          showSuccessModal(
-            "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
-          );
+          await sendViaFormSubmit();
+          showSuccessModal("Message sent! I'll reply within 24 hours.");
         } else {
           const formData = new FormData(form);
           const response = await fetch(form.getAttribute('action') || 'send-mail.php', {
@@ -437,10 +454,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const contentType = response.headers.get('content-type') || '';
           if (!contentType.includes('application/json')) {
-            sendViaMailto();
-            showSuccessModal(
-              "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
-            );
+            await sendViaFormSubmit();
+            showSuccessModal("Message sent! I'll reply within 24 hours.");
           } else {
             const data = await response.json();
             if (response.ok && data.ok) {
@@ -455,11 +470,9 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       } catch (err) {
-        // Last-resort fallback: open mailto and show success modal
-        sendViaMailto();
-        showSuccessModal(
-          "Your email app should have opened with the message pre-filled.<br>Just hit <strong>Send</strong> in your email app and I'll reply within 24 hours."
-        );
+        statusEl.className = 'form-status error';
+        statusEl.innerHTML = `${err.message || 'Could not send message right now.'} <a href="${mailtoHref}" style="${linkStyle}">Send via email app instead</a>.`;
+        statusEl.style.display = 'block';
       }
 
       submitBtn.innerHTML = originalHTML;
