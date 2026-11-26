@@ -812,6 +812,10 @@ body:has(.page-hero) {
   object-fit: contain;
 }
 
+.client-logo-item img[src*="mintrix-logo"] {
+  height: 26px;
+}
+
 .client-logo-item--dark {
   background: var(--dark-bg);
   border-color: transparent;
