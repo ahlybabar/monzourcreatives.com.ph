@@ -375,7 +375,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       /* ---- Animated loading modal ---- */
       const hasSwal = typeof Swal !== 'undefined';
-      let progressInterval;
+      const stepTimers = [];
+      const clearStepTimers = () => {
+        while (stepTimers.length) clearTimeout(stepTimers.pop());
+      };
 
       if (hasSwal) {
         Swal.fire({
@@ -383,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
           html: `
             <div style="margin:18px 0 6px">
               <div style="background:rgba(255,255,255,0.08);border-radius:999px;height:8px;overflow:hidden;width:100%">
-                <div id="mc-send-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#D95B38,#FF9E80);border-radius:999px;transition:width .3s ease"></div>
+                <div id="mc-send-bar" style="height:100%;width:15%;background:linear-gradient(90deg,#D95B38,#FF9E80);border-radius:999px;transition:width .25s ease"></div>
               </div>
               <p id="mc-send-status" style="margin:12px 0 0;font-size:0.85rem;opacity:0.7">Connecting to server...</p>
             </div>`,
@@ -398,16 +401,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const bar = document.getElementById('mc-send-bar');
             const status = document.getElementById('mc-send-status');
             const steps = [
-              { pct: 25, text: 'Preparing your message...', delay: 400 },
-              { pct: 50, text: 'Delivering to inbox...', delay: 900 },
-              { pct: 75, text: 'Almost there...', delay: 1800 },
-              { pct: 88, text: 'Finishing up...', delay: 3000 },
+              { pct: 40, text: 'Preparing your message...', delay: 150 },
+              { pct: 70, text: 'Delivering to inbox...', delay: 450 },
+              { pct: 90, text: 'Almost there...', delay: 900 },
             ];
             steps.forEach(({ pct, text, delay }) => {
-              setTimeout(() => {
-                if (bar) bar.style.width = pct + '%';
-                if (status) status.textContent = text;
-              }, delay);
+              stepTimers.push(
+                setTimeout(() => {
+                  if (bar) bar.style.width = pct + '%';
+                  if (status) status.textContent = text;
+                }, delay)
+              );
             });
           },
         });
@@ -416,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const showSuccessModal = (msg) => {
+        clearStepTimers();
         form.reset();
         statusEl.style.display = 'none';
         statusEl.textContent = '';
@@ -442,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 confirmButton: 'mc-swal-confirm',
               },
             });
-          }, 500);
+          }, 250);
         } else {
           statusEl.className = 'form-status success';
           statusEl.textContent = msg || "Message sent! I'll reply within 24 hours.";
@@ -451,6 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const showErrorModal = (errMsg) => {
+        clearStepTimers();
         if (hasSwal) {
           Swal.fire({
             icon: 'error',
@@ -473,30 +479,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      const sendViaFormSubmit = async () => {
-        const res = await fetch('https://formsubmit.co/ajax/f20b2f8fb00c1fcf8db507d5fef05310', {
+      const sendViaWeb3Forms = async () => {
+        const honeypot = form.querySelector('[name="website"]')?.value.trim() || '';
+        if (honeypot) {
+          return { success: true };
+        }
+
+        const payload = new FormData();
+        payload.append('access_key', '803adf19-0aa4-4054-bfe8-7c2c610ee5cd');
+        payload.append('subject', `New Portfolio Inquiry: ${service} — ${firstName} ${lastName}`.trim());
+        payload.append('from_name', 'Monzour Creatives Portfolio');
+        payload.append('name', `${firstName} ${lastName}`.trim());
+        payload.append('email', email);
+        payload.append('replyto', email);
+        payload.append('business_name', business);
+        payload.append('phone', phone);
+        payload.append('service', service);
+        payload.append('message', message);
+
+        const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            name: `${firstName} ${lastName}`.trim(),
-            email,
-            business,
-            phone,
-            service,
-            message,
-            _subject: `New Portfolio Inquiry: ${service} — ${firstName} ${lastName}`,
-            _replyto: email,
-            _template: 'table',
-            _captcha: 'false',
-          }),
+          body: payload,
         });
-        if (!res.ok) throw new Error('FormSubmit delivery failed');
         const result = await res.json().catch(() => ({}));
-        if (result.success === 'false' || result.success === false) {
-          throw new Error(result.message || 'FormSubmit delivery failed');
+        if (!res.ok || !result.success) {
+          throw new Error(result.message || 'Web3Forms delivery failed');
         }
         return result;
       };
@@ -513,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.hostname.endsWith('pages.dev');
 
         if (isStaticHost) {
-          await sendViaFormSubmit();
+          await sendViaWeb3Forms();
           showSuccessModal("Message sent! I'll reply within 24 hours.");
         } else {
           const formData = new FormData(form);
@@ -525,13 +532,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const contentType = response.headers.get('content-type') || '';
           if (!contentType.includes('application/json')) {
-            await sendViaFormSubmit();
+            await sendViaWeb3Forms();
             showSuccessModal("Message sent! I'll reply within 24 hours.");
           } else {
             const data = await response.json();
             if (response.ok && data.ok) {
               showSuccessModal(data.message);
             } else if (data.needs_smtp_key) {
+              clearStepTimers();
+              if (hasSwal) Swal.close();
               statusEl.className = 'form-status error';
               statusEl.innerHTML = `PHP Mailer needs a Gmail App Password in <code>mail-config.php</code>. <a href="${mailtoHref}" style="${linkStyle}">Send via email app (pre-filled)</a> or email <a href="mailto:monzourcreatives@gmail.com" style="${linkStyle}">monzourcreatives@gmail.com</a>.`;
               statusEl.style.display = 'block';
