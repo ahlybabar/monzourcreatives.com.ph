@@ -327,9 +327,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- 10. CONTACT FORM (PHP MAILER + SAFE FALLBACK) ---------- */
+  /* ---------- 10. SPECIALTY PRE-SELECTION & CONTACT FORM ---------- */
+  const SERVICE_PAGE_MAP = {
+    'ai-automation': 'n8n Workflow Automation',
+    'meta-ads': 'Meta Ads & Paid Social',
+    'seo': 'Local SEO & Google Business Profile',
+    'web-development': 'Website Design & Development',
+    'social-media': 'Social Media Management',
+  };
+
+  const resolveServiceFromPath = (path) => {
+    if (!path) return '';
+    for (const [slug, label] of Object.entries(SERVICE_PAGE_MAP)) {
+      if (path.includes(slug)) return label;
+    }
+    return '';
+  };
+
+  const currentServiceFromPage = resolveServiceFromPath(window.location.pathname);
+  if (currentServiceFromPage) {
+    try { sessionStorage.setItem('mc_selected_service', currentServiceFromPage); } catch (_) {}
+  }
+
+  document.querySelectorAll('a[href*="services/"], a[data-service]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const svc = link.dataset.service || resolveServiceFromPath(link.getAttribute('href') || '');
+      if (svc) {
+        try { sessionStorage.setItem('mc_selected_service', svc); } catch (_) {}
+      }
+    });
+  });
+
   const form = document.getElementById('contact-form');
   if (form) {
+    const serviceSelect = form.querySelector('#cf-service');
+    if (serviceSelect) {
+      const params = new URLSearchParams(window.location.search);
+      const requestedService = params.get('service') || (() => {
+        try { return sessionStorage.getItem('mc_selected_service') || ''; } catch (_) { return ''; }
+      })();
+
+      if (requestedService) {
+        const normalized = requestedService.trim().toLowerCase();
+        const matchedOption = Array.from(serviceSelect.options).find(
+          (opt) => opt.value && (opt.value.toLowerCase() === normalized || opt.text.toLowerCase().includes(normalized))
+        );
+        if (matchedOption) {
+          serviceSelect.value = matchedOption.value;
+        }
+      }
+
+      serviceSelect.addEventListener('change', () => {
+        try {
+          if (serviceSelect.value) {
+            sessionStorage.setItem('mc_selected_service', serviceSelect.value);
+          } else {
+            sessionStorage.removeItem('mc_selected_service');
+          }
+        } catch (_) {}
+      });
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let valid = true;
